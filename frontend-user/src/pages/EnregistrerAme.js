@@ -309,18 +309,18 @@ const EnregistrerAme = () => {
   const handleNext = async () => {
     // Validation pour chaque étape
     if (activeStep === 0) {
-      // Étape 1: Vérifier qu'on a au moins (Nom OU Prénom) + Commune
+      // Étape 1: Vérifier qu'on a au moins une des combinaisons valides:
+      // - Nom + Prénom (avec ou sans Commune)
+      // - Nom + Commune
+      // - Prénom + Commune
       const hasNom = formData.nom && formData.nom.trim() !== '';
       const hasPrenom = formData.prenom && formData.prenom.trim() !== '';
       const hasCommune = formData.commune && formData.commune.trim() !== '';
 
-      if (!hasCommune) {
-        setError('Veuillez sélectionner une Commune/Ville');
-        return;
-      }
+      const isValid = (hasNom && hasPrenom) || (hasNom && hasCommune) || (hasPrenom && hasCommune);
 
-      if (!hasNom && !hasPrenom) {
-        setError('Veuillez renseigner au moins le Nom ou le Prénom');
+      if (!isValid) {
+        setError('Veuillez renseigner: (Nom + Prénom) ou (Nom + Commune) ou (Prénom + Commune)');
         return;
       }
 
@@ -518,7 +518,7 @@ const EnregistrerAme = () => {
                   name="commune"
                   value={formData.commune}
                   onChange={handleChange}
-                  helperText="Sélectionnez le lieu de résidence *"
+                  helperText="Requis si Nom ou Prénom seul"
                 >
                   <MenuItem value="">
                     <em>Choisir une commune/ville</em>
