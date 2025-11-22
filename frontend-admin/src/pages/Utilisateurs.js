@@ -72,9 +72,9 @@ const Utilisateurs = () => {
     switch (role) {
       case 'admin':
         return 'error';
-      case 'responsable':
+      case 'pasteur':
         return 'warning';
-      case 'call_center':
+      case 'agent_call_center':
         return 'info';
       case 'evangeliste':
         return 'success';
@@ -87,10 +87,10 @@ const Utilisateurs = () => {
     switch (role) {
       case 'admin':
         return 'Administrateur';
-      case 'responsable':
-        return 'Responsable';
-      case 'call_center':
-        return 'Call Center';
+      case 'pasteur':
+        return 'Pasteur';
+      case 'agent_call_center':
+        return 'Agent Call Center';
       case 'evangeliste':
         return 'Évangéliste';
       default:
@@ -102,11 +102,11 @@ const Utilisateurs = () => {
     switch (role) {
       case 'admin':
         return 'Tous les droits d\'administration';
-      case 'responsable':
+      case 'pasteur':
         return 'Peut gérer les utilisateurs et voir toutes les âmes';
       case 'evangeliste':
         return 'Peut enregistrer des âmes, voir ses contacts, accéder aux ressources';
-      case 'call_center':
+      case 'agent_call_center':
         return 'Accès au Call Center pour appeler et suivre les âmes enregistrées';
       default:
         return '';
@@ -366,9 +366,9 @@ const Utilisateurs = () => {
                 helperText={getRoleDescription(editFormData.role)}
               >
                 <MenuItem value="evangeliste">Évangéliste</MenuItem>
-                <MenuItem value="responsable">Responsable</MenuItem>
+                <MenuItem value="pasteur">Pasteur</MenuItem>
                 <MenuItem value="admin">Administrateur</MenuItem>
-                <MenuItem value="call_center">Call Center</MenuItem>
+                <MenuItem value="agent_call_center">Agent Call Center</MenuItem>
               </TextField>
             </Grid>
 
