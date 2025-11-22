@@ -181,6 +181,22 @@ const besoinsPriereOptions = [
   'Autre'
 ];
 
+// Fonction pour formater le numéro de téléphone (XX XX XX XX XX)
+const formatPhoneNumber = (value) => {
+  // Retirer tout ce qui n'est pas un chiffre
+  const numbers = value.replace(/\D/g, '');
+  // Limiter à 10 chiffres
+  const limited = numbers.slice(0, 10);
+  // Ajouter des espaces tous les 2 chiffres
+  const formatted = limited.replace(/(\d{2})(?=\d)/g, '$1 ');
+  return formatted;
+};
+
+// Fonction pour obtenir le nombre de chiffres (sans espaces)
+const getDigitsCount = (value) => {
+  return value.replace(/\D/g, '').length;
+};
+
 const EnregistrerAme = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [error, setError] = useState('');
@@ -191,6 +207,7 @@ const EnregistrerAme = () => {
   const [selectedBesoinsPriere, setSelectedBesoinsPriere] = useState([]);
   const [ameId, setAmeId] = useState(null); // ID de l'âme créée
   const [saveMessage, setSaveMessage] = useState(''); // Message de sauvegarde réussie
+  const [phoneError, setPhoneError] = useState(''); // Erreur de validation téléphone
 
   const [formData, setFormData] = useState({
     // Informations personnelles
@@ -227,6 +244,26 @@ const EnregistrerAme = () => {
       ...formData,
       [e.target.name]: e.target.value
     });
+  };
+
+  // Gestion spéciale du téléphone avec formatage
+  const handlePhoneChange = (e) => {
+    const formatted = formatPhoneNumber(e.target.value);
+    const digitsCount = getDigitsCount(formatted);
+
+    setFormData({
+      ...formData,
+      telephone: formatted
+    });
+
+    // Validation en temps réel
+    if (digitsCount > 0 && digitsCount < 10) {
+      setPhoneError(`${digitsCount}/10 chiffres - Veuillez saisir 10 chiffres`);
+    } else if (digitsCount === 10) {
+      setPhoneError('');
+    } else {
+      setPhoneError('');
+    }
   };
 
   const handleCommuneRencontreChange = (e) => {
@@ -274,6 +311,13 @@ const EnregistrerAme = () => {
         setError('Veuillez remplir tous les champs obligatoires (Nom, Prénom, Téléphone)');
         return;
       }
+      // Vérifier que le téléphone a exactement 10 chiffres
+      const phoneDigits = getDigitsCount(formData.telephone);
+      if (phoneDigits !== 10) {
+        setError('Le numéro de téléphone doit contenir exactement 10 chiffres');
+        setPhoneError(`${phoneDigits}/10 chiffres - Numéro invalide`);
+        return;
+      }
     } else if (activeStep === 1) {
       // Étape 2: Vérifier que typeRencontre est rempli
       if (!formData.typeRencontre) {
@@ -290,6 +334,7 @@ const EnregistrerAme = () => {
       // Préparer les données pour la sauvegarde
       const dataToSend = {
         ...formData,
+        telephone: formData.telephone.replace(/\s/g, ''), // Retirer les espaces du téléphone
         besoinsPriere: formData.besoinsPriere ? formData.besoinsPriere.split(',').map(b => b.trim()) : []
       };
 
@@ -354,6 +399,7 @@ const EnregistrerAme = () => {
       // Transformer besoinsPriere en tableau
       const dataToSend = {
         ...formData,
+        telephone: formData.telephone.replace(/\s/g, ''), // Retirer les espaces du téléphone
         besoinsPriere: formData.besoinsPriere ? formData.besoinsPriere.split(',').map(b => b.trim()) : []
       };
 
@@ -416,7 +462,11 @@ const EnregistrerAme = () => {
                 label="Téléphone"
                 name="telephone"
                 value={formData.telephone}
-                onChange={handleChange}
+                onChange={handlePhoneChange}
+                placeholder="07 08 67 66 04"
+                error={!!phoneError}
+                helperText={phoneError || "Format: XX XX XX XX XX (10 chiffres)"}
+                inputProps={{ maxLength: 14 }} // 10 chiffres + 4 espaces
               />
             </Grid>
             <Grid item xs={12} sm={6}>
