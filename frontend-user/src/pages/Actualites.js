@@ -144,9 +144,15 @@ const Actualites = () => {
     setMediaDialog({ open: false, type: '', url: '' });
   };
 
-  // 🔧 MODE SIMULATION : Changez ce nombre pour tester la progression (1-21)
-  // Exemple: 1 = Jour 1, 10 = Jour 10, 21 = Offensive terminée
-  const jourActuel = 6; // ← CHANGEZ ICI POUR TESTER (jour 6 simulé)
+  // 📅 CALCUL AUTOMATIQUE DU JOUR ACTUEL DE L'OFFENSIVE
+  // L'offensive commence le 16 novembre 2025
+  const dateDebutOffensive = new Date('2025-11-16');
+  const aujourdhui = new Date();
+  aujourdhui.setHours(0, 0, 0, 0); // Ignorer l'heure
+  const diffTime = aujourdhui.getTime() - dateDebutOffensive.getTime();
+  const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+  // Le jour actuel est entre 1 et 21 (ou 0 si avant le début, ou 22 si après la fin)
+  const jourActuel = Math.max(0, Math.min(22, diffDays + 1));
 
   // Fonction pour déterminer la couleur selon la progression
   // LOGIQUE : Gauche = Terre non conquise, Droite = Terre conquise (verte)
