@@ -493,7 +493,8 @@ const EnregistrerAme = () => {
                 onChange={handlePhoneChange}
                 placeholder="07 08 67 66 04"
                 error={!!phoneError}
-                helperText={phoneError || "Optionnel - Format: XX XX XX XX XX"}
+                helperText={phoneError || "Obligatoire - Format: XX XX XX XX XX"}
+                required
                 inputProps={{ maxLength: 14 }} // 10 chiffres + 4 espaces
               />
             </Grid>
