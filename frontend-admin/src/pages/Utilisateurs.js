@@ -72,10 +72,29 @@ const Utilisateurs = () => {
     switch (role) {
       case 'admin':
         return 'error';
-      case 'pasteur':
+      case 'responsable':
         return 'warning';
+      case 'call_center':
+        return 'info';
+      case 'evangeliste':
+        return 'success';
       default:
         return 'primary';
+    }
+  };
+
+  const getRoleLabel = (role) => {
+    switch (role) {
+      case 'admin':
+        return 'Administrateur';
+      case 'responsable':
+        return 'Responsable';
+      case 'call_center':
+        return 'Call Center';
+      case 'evangeliste':
+        return 'Évangéliste';
+      default:
+        return role;
     }
   };
 
@@ -83,11 +102,11 @@ const Utilisateurs = () => {
     switch (role) {
       case 'admin':
         return 'Tous les droits d\'administration';
-      case 'pasteur':
+      case 'responsable':
         return 'Peut gérer les utilisateurs et voir toutes les âmes';
       case 'evangeliste':
         return 'Peut enregistrer des âmes, voir ses contacts, accéder aux ressources';
-      case 'agent_call_center':
+      case 'call_center':
         return 'Accès au Call Center pour appeler et suivre les âmes enregistrées';
       default:
         return '';
@@ -244,7 +263,7 @@ const Utilisateurs = () => {
                 <TableCell>{formatPhoneNumber(user.telephone)}</TableCell>
                 <TableCell>
                   <Chip
-                    label={user.role}
+                    label={getRoleLabel(user.role)}
                     color={getRoleColor(user.role)}
                     size="small"
                   />
@@ -347,9 +366,9 @@ const Utilisateurs = () => {
                 helperText={getRoleDescription(editFormData.role)}
               >
                 <MenuItem value="evangeliste">Évangéliste</MenuItem>
-                <MenuItem value="pasteur">Pasteur</MenuItem>
+                <MenuItem value="responsable">Responsable</MenuItem>
                 <MenuItem value="admin">Administrateur</MenuItem>
-                <MenuItem value="agent_call_center">Agent Call Center</MenuItem>
+                <MenuItem value="call_center">Call Center</MenuItem>
               </TextField>
             </Grid>
 

@@ -226,22 +226,22 @@ const AjouterUtilisateur = () => {
                   <MenuItem value="evangeliste">
                     Évangéliste
                   </MenuItem>
-                  <MenuItem value="pasteur">
-                    Pasteur
+                  <MenuItem value="responsable">
+                    Responsable
                   </MenuItem>
                   <MenuItem value="admin">
                     Administrateur
                   </MenuItem>
-                  <MenuItem value="agent_call_center">
-                    Agent Call Center
+                  <MenuItem value="call_center">
+                    Call Center
                   </MenuItem>
                 </Select>
               </FormControl>
               <Typography variant="caption" color="textSecondary" sx={{ mt: 1, display: 'block' }}>
                 {formData.role === 'evangeliste' && '• Peut enregistrer des âmes, voir ses contacts, accéder aux ressources'}
-                {formData.role === 'pasteur' && '• Accès complet à l\'interface admin + interface évangéliste'}
+                {formData.role === 'responsable' && '• Accès complet à l\'interface admin + interface évangéliste'}
                 {formData.role === 'admin' && '• Accès complet à toutes les fonctionnalités (admin + évangéliste)'}
-                {formData.role === 'agent_call_center' && '• Accès au Call Center pour appeler et suivre les âmes enregistrées'}
+                {formData.role === 'call_center' && '• Accès au Call Center pour appeler et suivre les âmes enregistrées'}
               </Typography>
             </Grid>
 
@@ -352,7 +352,7 @@ const AjouterUtilisateur = () => {
           <Grid item xs={12} md={3}>
             <Box sx={{ p: 2, bgcolor: 'white', borderRadius: 1 }}>
               <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: '#FFA500' }}>
-                Pasteur
+                Responsable
               </Typography>
               <Typography variant="body2" sx={{ mt: 1 }}>
                 • Tous les droits évangéliste<br />
@@ -377,8 +377,8 @@ const AjouterUtilisateur = () => {
           </Grid>
           <Grid item xs={12} md={3}>
             <Box sx={{ p: 2, bgcolor: 'white', borderRadius: 1 }}>
-              <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: '#4CAF50' }}>
-                Agent Call Center
+              <Typography variant="subtitle1" sx={{ fontWeight: 'bold', color: '#2196F3' }}>
+                Call Center
               </Typography>
               <Typography variant="body2" sx={{ mt: 1 }}>
                 • Accéder au Call Center<br />
