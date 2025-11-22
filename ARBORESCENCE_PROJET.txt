@@ -1,0 +1,259 @@
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│         🙏 REHOBOTH CONNECT - STRUCTURE DU PROJET                  │
+│                                                                     │
+│         Application d'Évangélisation et de Suivi des Âmes          │
+│         Centre Missionnaire REHOBOTH - Côte d'Ivoire               │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+
+APPLI EVANGELISATION/
+│
+├── 📄 DOCUMENTATION (À LIRE EN PREMIER)
+│   ├── COMMENCER_ICI.md                 ⭐ POINT DE DÉPART
+│   ├── INDEX_DOCUMENTATION.md           📚 Guide de navigation
+│   ├── GUIDE_DEMARRAGE.md              ⚡ Démarrage rapide (10 min)
+│   ├── README.md                        📖 Documentation technique
+│   ├── RESUME_PROJET.md                 📊 Vue d'ensemble complète
+│   ├── INSTRUCTIONS_COMPLETES.md        📝 Guide détaillé (60 min)
+│   └── ARBORESCENCE_PROJET.txt         📁 Ce fichier
+│
+├── 📦 CONFIGURATION GLOBALE
+│   ├── package.json                     Scripts npm globaux
+│   └── .gitignore                       Fichiers ignorés par Git
+│
+├── 🔧 BACKEND (API Node.js + MongoDB)
+│   │
+│   ├── 📁 config/
+│   │   └── database.js                  Configuration MongoDB
+│   │
+│   ├── 📁 models/                       🗄️ MODÈLES DE DONNÉES (5)
+│   │   ├── User.js                      Utilisateurs (évangélisateurs, admins)
+│   │   ├── Ame.js                       Contacts/Âmes enregistrées
+│   │   ├── Parcours.js                  Parcours de formation
+│   │   ├── Ressource.js                 Ressources bibliques
+│   │   └── Campagne.js                  Campagnes d'évangélisation
+│   │
+│   ├── 📁 controllers/                  🎮 LOGIQUE MÉTIER (4)
+│   │   ├── authController.js            Inscription, connexion
+│   │   ├── ameController.js             Gestion des âmes
+│   │   ├── parcoursController.js        Gestion des parcours
+│   │   └── ressourceController.js       Gestion des ressources
+│   │
+│   ├── 📁 routes/                       🛣️ ROUTES API (4)
+│   │   ├── auth.js                      POST /api/auth/login
+│   │   ├── ames.js                      GET/POST /api/ames
+│   │   ├── parcours.js                  GET/POST /api/parcours
+│   │   └── ressources.js                GET/POST /api/ressources
+│   │
+│   ├── 📁 middleware/
+│   │   └── auth.js                      🔐 Protection JWT
+│   │
+│   ├── 📄 server.js                     ⚙️ Serveur Express (PORT 5000)
+│   ├── 📄 seedData.js                   🌱 Données de démonstration
+│   ├── 📄 .env                          🔑 Variables d'environnement
+│   ├── 📄 package.json                  Dépendances backend
+│   └── 📁 node_modules/                 (généré après npm install)
+│
+├── 🌐 FRONTEND UTILISATEUR (React)
+│   │
+│   ├── 📁 src/
+│   │   │
+│   │   ├── 📁 components/               🧩 COMPOSANTS REACT (2)
+│   │   │   ├── Navbar.js                Barre de navigation responsive
+│   │   │   └── PrivateRoute.js          Protection des routes
+│   │   │
+│   │   ├── 📁 pages/                    📄 PAGES (6)
+│   │   │   ├── Login.js                 Page de connexion
+│   │   │   ├── Register.js              Page d'inscription
+│   │   │   ├── Home.js                  Tableau de bord
+│   │   │   ├── EnregistrerAme.js        Formulaire en 3 étapes
+│   │   │   ├── MesAmes.js               Liste des contacts
+│   │   │   └── Ressources.js            Bibliothèque de ressources
+│   │   │
+│   │   ├── 📁 context/
+│   │   │   └── AuthContext.js           🔐 Gestion authentification
+│   │   │
+│   │   ├── 📁 services/
+│   │   │   └── api.js                   🌐 Configuration Axios
+│   │   │
+│   │   ├── App.js                       ⚛️ Composant principal
+│   │   ├── App.css                      Styles
+│   │   └── index.js                     Point d'entrée React
+│   │
+│   ├── 📁 public/                       Fichiers publics
+│   ├── 📄 .env                          Variables d'environnement
+│   ├── 📄 package.json                  Dépendances frontend
+│   └── 📁 node_modules/                 (généré après npm install)
+│
+└── 🔮 FRONTEND ADMIN (À DÉVELOPPER)
+    └── (Interface administrateur à créer)
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                         💡 POINTS CLÉS                              │
+└─────────────────────────────────────────────────────────────────────┘
+
+📦 TOTAL DE FICHIERS CRÉÉS :
+   ✅ 5 Modèles de données
+   ✅ 4 Contrôleurs
+   ✅ 4 Routes API
+   ✅ 6 Pages React
+   ✅ 2 Composants React
+   ✅ 1 Middleware de sécurité
+   ✅ 7 Fichiers de documentation
+   ✅ 1 Script de peuplement de données
+
+🔧 TECHNOLOGIES :
+   Backend:  Node.js, Express.js, MongoDB, Mongoose, JWT
+   Frontend: React 18, Material-UI, React Router, Axios
+
+📊 FONCTIONNALITÉS :
+   ✅ Authentification sécurisée (JWT)
+   ✅ Enregistrement d'âmes (formulaire 3 étapes)
+   ✅ Gestion des contacts
+   ✅ Ressources d'évangélisation
+   ✅ Parcours de formation
+   ✅ Suivi détaillé
+   ✅ Responsive (mobile, tablette, desktop)
+
+🚀 POUR DÉMARRER :
+   1. npm run install:all       (Installer dépendances)
+   2. npm run seed               (Peupler la base)
+   3. npm run start:backend      (Terminal 1)
+   4. npm run start:frontend     (Terminal 2)
+   5. Ouvrir http://localhost:3000
+   6. Se connecter avec admin@rehoboth.ci / Admin123!
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                      🎯 FLUX DE DONNÉES                             │
+└─────────────────────────────────────────────────────────────────────┘
+
+┌──────────────┐          ┌──────────────┐          ┌──────────────┐
+│              │          │              │          │              │
+│   FRONTEND   │  HTTP    │   BACKEND    │  Mongoose│   MONGODB    │
+│   React      │<-------->│   Express    │<-------->│   Database   │
+│   Port 3000  │   JWT    │   Port 5000  │          │   Port 27017 │
+│              │          │              │          │              │
+└──────────────┘          └──────────────┘          └──────────────┘
+      │                          │                          │
+      │                          │                          │
+      v                          v                          v
+  Composants              Routes + Controllers         Collections:
+  - Login                 - /api/auth                  - users
+  - Register              - /api/ames                  - ames
+  - Home                  - /api/ressources            - ressources
+  - EnregistrerAme        - /api/parcours              - parcours
+  - MesAmes                                            - campagnes
+  - Ressources
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                    📱 COMPATIBILITÉ                                 │
+└─────────────────────────────────────────────────────────────────────┘
+
+✅ Navigateurs :
+   - Chrome/Edge (recommandé)
+   - Firefox
+   - Safari
+   - Opera
+
+✅ Appareils :
+   - 📱 Smartphones (iOS, Android)
+   - 📱 Tablettes (iPad, Android)
+   - 💻 Ordinateurs (Windows, Mac, Linux)
+
+✅ Tailles d'écran :
+   - Mobile  : < 600px (navigation hamburger)
+   - Tablette: 600-960px (layout adapté)
+   - Desktop : > 960px (layout complet)
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                   🔐 SÉCURITÉ                                       │
+└─────────────────────────────────────────────────────────────────────┘
+
+✅ Mots de passe hachés (bcryptjs - 10 rounds)
+✅ Authentification JWT (expiration 7 jours)
+✅ Routes protégées par middleware
+✅ Validation des données côté serveur
+✅ Variables sensibles dans .env
+✅ CORS configuré
+✅ Contrôle des rôles (évangélisateur, admin, pasteur)
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                  📈 DONNÉES DE DÉMONSTRATION                        │
+└─────────────────────────────────────────────────────────────────────┘
+
+Créées automatiquement par seedData.js :
+
+👤 1 Utilisateur Admin :
+   Email    : admin@rehoboth.ci
+   Password : Admin123!
+   Rôle     : admin
+
+📚 4 Ressources bibliques :
+   1. Qui est Jésus-Christ ?
+   2. Le Plan du Salut
+   3. Comment prier efficacement
+   4. Versets clés pour l'évangélisation
+
+🎓 1 Parcours de formation :
+   - Fondations de la Foi (7 jours, 5 leçons)
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                    🚀 COMMANDES UTILES                              │
+└─────────────────────────────────────────────────────────────────────┘
+
+À LA RACINE DU PROJET :
+  npm run install:all      ➜ Installer toutes les dépendances
+  npm run start:backend    ➜ Démarrer le backend (port 5000)
+  npm run start:frontend   ➜ Démarrer le frontend (port 3000)
+  npm run seed            ➜ Peupler la base de données
+
+DANS backend/ :
+  npm start               ➜ Démarrer le serveur
+  node seedData.js        ➜ Insérer les données de démo
+
+DANS frontend-user/ :
+  npm start               ➜ Démarrer React (dev)
+  npm run build           ➜ Build pour production
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                  ✝️ MISSION & VISION                                │
+└─────────────────────────────────────────────────────────────────────┘
+
+"Allez, faites de toutes les nations des disciples, les baptisant
+au nom du Père, du Fils et du Saint-Esprit, et enseignez-leur à
+observer tout ce que je vous ai prescrit."
+                                            - Matthieu 28:19-20
+
+Cette application est conçue pour équiper chaque membre du Centre
+Missionnaire REHOBOTH avec les outils nécessaires pour accomplir
+la Grande Commission à l'ère numérique.
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                     📞 SUPPORT                                      │
+└─────────────────────────────────────────────────────────────────────┘
+
+Centre Missionnaire REHOBOTH
+Email       : support@rehoboth.ci
+Téléphone   : +225 XX XX XX XX XX
+
+Documentation : Consultez les fichiers .md à la racine
+Problèmes     : Voir INSTRUCTIONS_COMPLETES.md § "Résolution de problèmes"
+
+
+┌─────────────────────────────────────────────────────────────────────┐
+│                                                                     │
+│   🙏 Que Dieu bénisse votre ministère d'évangélisation !           │
+│                                                                     │
+│   Version 1.0.0 - Novembre 2025                                    │
+│   Développé avec ❤️ pour le Royaume de Dieu                        │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘

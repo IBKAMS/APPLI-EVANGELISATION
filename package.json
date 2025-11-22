@@ -1,0 +1,26 @@
+{
+  "name": "appli-evangelisation",
+  "version": "1.0.0",
+  "description": "Application d'évangélisation et de suivi des âmes - Centre Missionnaire REHOBOTH",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "cd backend && npm install && cd ../frontend-user && npm install && cd ../frontend-admin && npm install",
+    "start:backend": "cd backend && npm start",
+    "start:frontend": "cd frontend-user && npm start",
+    "start:admin": "cd frontend-admin && npm start",
+    "seed": "cd backend && node seedData.js",
+    "dev": "concurrently \"npm run start:backend\" \"npm run start:frontend\" \"npm run start:admin\""},
+  "keywords": [
+    "evangelisation",
+    "suivi",
+    "ames",
+    "rehoboth",
+    "church",
+    "management"
+  ],
+  "author": "Centre Missionnaire REHOBOTH",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
