@@ -309,24 +309,35 @@ const EnregistrerAme = () => {
   const handleNext = async () => {
     // Validation pour chaque étape
     if (activeStep === 0) {
-      // Étape 1: Vérifier que nom, prénom, téléphone et commune sont remplis
-      if (!formData.nom || !formData.prenom || !formData.telephone || !formData.commune) {
-        setError('Veuillez remplir tous les champs obligatoires (Nom, Prénom, Téléphone, Commune/Ville)');
+      // Étape 1: Vérifier qu'on a au moins (Nom OU Prénom) + Commune
+      const hasNom = formData.nom && formData.nom.trim() !== '';
+      const hasPrenom = formData.prenom && formData.prenom.trim() !== '';
+      const hasCommune = formData.commune && formData.commune.trim() !== '';
+
+      if (!hasCommune) {
+        setError('Veuillez sélectionner une Commune/Ville');
         return;
       }
-      // Vérifier que le téléphone commence par 0
-      const phoneClean = formData.telephone.replace(/\s/g, '');
-      if (phoneClean[0] !== '0') {
-        setError('Le numéro de téléphone doit commencer par 0');
-        setPhoneError('Le numéro doit commencer par 0');
+
+      if (!hasNom && !hasPrenom) {
+        setError('Veuillez renseigner au moins le Nom ou le Prénom');
         return;
       }
-      // Vérifier que le téléphone a exactement 10 chiffres
-      const phoneDigits = getDigitsCount(formData.telephone);
-      if (phoneDigits !== 10) {
-        setError('Le numéro de téléphone doit contenir exactement 10 chiffres');
-        setPhoneError(`${phoneDigits}/10 chiffres - Numéro invalide`);
-        return;
+
+      // Validation du téléphone seulement s'il est renseigné
+      if (formData.telephone && formData.telephone.trim() !== '') {
+        const phoneClean = formData.telephone.replace(/\s/g, '');
+        if (phoneClean[0] !== '0') {
+          setError('Le numéro de téléphone doit commencer par 0');
+          setPhoneError('Le numéro doit commencer par 0');
+          return;
+        }
+        const phoneDigits = getDigitsCount(formData.telephone);
+        if (phoneDigits !== 10) {
+          setError('Le numéro de téléphone doit contenir exactement 10 chiffres');
+          setPhoneError(`${phoneDigits}/10 chiffres - Numéro invalide`);
+          return;
+        }
       }
     } else if (activeStep === 1) {
       // Étape 2: Vérifier que typeRencontre est rempli
@@ -447,27 +458,26 @@ const EnregistrerAme = () => {
           <Grid container spacing={2}>
             <Grid item xs={12} sm={6}>
               <TextField
-                required
                 fullWidth
                 label="Nom"
                 name="nom"
                 value={formData.nom}
                 onChange={handleChange}
+                helperText="Nom ou Prénom requis"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                required
                 fullWidth
                 label="Prénom"
                 name="prenom"
                 value={formData.prenom}
                 onChange={handleChange}
+                helperText="Nom ou Prénom requis"
               />
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                required
                 fullWidth
                 label="Téléphone"
                 name="telephone"
@@ -475,7 +485,7 @@ const EnregistrerAme = () => {
                 onChange={handlePhoneChange}
                 placeholder="07 08 67 66 04"
                 error={!!phoneError}
-                helperText={phoneError || "Format: XX XX XX XX XX (10 chiffres)"}
+                helperText={phoneError || "Optionnel - Format: XX XX XX XX XX"}
                 inputProps={{ maxLength: 14 }} // 10 chiffres + 4 espaces
               />
             </Grid>
