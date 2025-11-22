@@ -250,6 +250,7 @@ const EnregistrerAme = () => {
   const handlePhoneChange = (e) => {
     const formatted = formatPhoneNumber(e.target.value);
     const digitsCount = getDigitsCount(formatted);
+    const digits = formatted.replace(/\s/g, '');
 
     setFormData({
       ...formData,
@@ -257,7 +258,9 @@ const EnregistrerAme = () => {
     });
 
     // Validation en temps réel
-    if (digitsCount > 0 && digitsCount < 10) {
+    if (digitsCount > 0 && digits[0] !== '0') {
+      setPhoneError('Le numéro doit commencer par 0');
+    } else if (digitsCount > 0 && digitsCount < 10) {
       setPhoneError(`${digitsCount}/10 chiffres - Veuillez saisir 10 chiffres`);
     } else if (digitsCount === 10) {
       setPhoneError('');
@@ -309,6 +312,13 @@ const EnregistrerAme = () => {
       // Étape 1: Vérifier que nom, prénom et téléphone sont remplis
       if (!formData.nom || !formData.prenom || !formData.telephone) {
         setError('Veuillez remplir tous les champs obligatoires (Nom, Prénom, Téléphone)');
+        return;
+      }
+      // Vérifier que le téléphone commence par 0
+      const phoneClean = formData.telephone.replace(/\s/g, '');
+      if (phoneClean[0] !== '0') {
+        setError('Le numéro de téléphone doit commencer par 0');
+        setPhoneError('Le numéro doit commencer par 0');
         return;
       }
       // Vérifier que le téléphone a exactement 10 chiffres
