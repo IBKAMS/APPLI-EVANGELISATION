@@ -309,9 +309,9 @@ const EnregistrerAme = () => {
   const handleNext = async () => {
     // Validation pour chaque étape
     if (activeStep === 0) {
-      // Étape 1: Vérifier que nom, prénom et téléphone sont remplis
-      if (!formData.nom || !formData.prenom || !formData.telephone) {
-        setError('Veuillez remplir tous les champs obligatoires (Nom, Prénom, Téléphone)');
+      // Étape 1: Vérifier que nom, prénom, téléphone et commune sont remplis
+      if (!formData.nom || !formData.prenom || !formData.telephone || !formData.commune) {
+        setError('Veuillez remplir tous les champs obligatoires (Nom, Prénom, Téléphone, Commune/Ville)');
         return;
       }
       // Vérifier que le téléphone commence par 0
@@ -501,13 +501,14 @@ const EnregistrerAme = () => {
             <Grid item xs={12} sm={6}>
               <Tooltip title="Lieu de résidence de la personne" placement="top" arrow>
                 <TextField
+                  required
                   select
                   fullWidth
                   label="Commune / Ville"
                   name="commune"
                   value={formData.commune}
                   onChange={handleChange}
-                  helperText="Sélectionnez le lieu de résidence"
+                  helperText="Sélectionnez le lieu de résidence *"
                 >
                   <MenuItem value="">
                     <em>Choisir une commune/ville</em>
