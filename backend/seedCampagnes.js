@@ -5,7 +5,7 @@ const ATLAS_URI = 'mongodb+srv://aidriss01_db_user:Cdv5RAnJmGiry2JG@cluster0.bkw
 // Schéma Campagne
 const campagneSchema = new mongoose.Schema({
   titre: { type: String, required: true },
-  type: { type: String, enum: ['Journée évangélisation', 'Week-end évangélisation', 'Semaine évangélisation', 'Croisade', 'Autre'], default: 'Journée évangélisation' },
+  type: { type: String, enum: ['Journée évangélisation', 'Week-end évangélisation', 'Semaine évangélisation', 'Croisade', 'Rue', 'Autre'], default: 'Rue' },
   description: { type: String, required: true },
   dateDebut: { type: Date, required: true },
   dateFin: { type: Date, required: true },
@@ -45,52 +45,49 @@ const Campagne = mongoose.model('Campagne', campagneSchema);
 
 const campagnesData = [
   {
-    titre: "MERA 1 - Mission d'Évangélisation pour une Récolte Abondante",
-    type: "Journée évangélisation",
-    description: "Première grande journée de mission d'évangélisation à Angré 8e tranche. Une journée bénie où l'équipe REHOBOTH a parcouru les rues pour annoncer la Bonne Nouvelle et rencontrer les âmes en quête de vérité.",
-    dateDebut: new Date("2025-10-26"),
-    dateFin: new Date("2025-10-26"),
-    lieu: "Angré 8e tranche, Cocody",
+    titre: "MERA 1",
+    type: "Rue",
+    description: "Campagne d'évangélisation dans le quartier de l'église. Première édition de la Mission d'Évangélisation pour une Récolte Abondante. Une journée bénie où l'équipe REHOBOTH a parcouru les rues pour annoncer la Bonne Nouvelle.",
+    dateDebut: new Date("2025-08-23"),
+    dateFin: new Date("2025-08-23"),
+    lieu: "Angré 8e tranche",
     statut: "Terminée",
     publique: true,
     objectifs: { nombreAmes: 100, nombreTracts: 500, nombreParticipants: 30 },
     resultats: { amesGagnees: 120, tractsDistribues: 450, participantsPresents: 28 },
-    parcours: "Départ église → Carrefour Palmeraie → Rue des commerces → Quartier résidentiel → Retour église",
-    programme: "07h00 - Rassemblement et prière\n08h00 - Départ pour le terrain\n08h30-12h00 - Évangélisation\n12h00 - Pause déjeuner\n13h00-16h00 - Suite évangélisation\n16h30 - Débriefing et action de grâce",
+    programme: "07h00 - Rassemblement et prière\n08h00 - Départ pour le terrain\n08h30-12h00 - Évangélisation\n12h00-16h00 - Suite évangélisation\n16h30 - Débriefing et action de grâce",
     lieuxRassemblement: [
       { nom: "Église CM REHOBOTH", adresse: "Angré 8e tranche", heureRassemblement: "07h00" }
     ],
-    notes: "Journée bénie avec 120 âmes rencontrées. Gloire à Dieu !"
+    notes: "Première édition réussie avec 120 âmes rencontrées. Gloire à Dieu !"
   },
   {
-    titre: "MERA 2 - Mission d'Évangélisation pour une Récolte Abondante",
-    type: "Journée évangélisation",
-    description: "Deuxième grande journée de mission d'évangélisation. L'équipe a poursuivi le travail commencé lors de MERA 1, touchant de nouveaux quartiers et consolidant les contacts établis.",
-    dateDebut: new Date("2025-11-09"),
-    dateFin: new Date("2025-11-09"),
-    lieu: "Angré 8e tranche, Cocody",
+    titre: "MERA 2",
+    type: "Rue",
+    description: "Campagne d'évangélisation aux alentours de l'église. Deuxième édition de MERA avec un nouvel élan missionnaire pour atteindre encore plus d'âmes dans notre communauté.",
+    dateDebut: new Date("2025-09-20"),
+    dateFin: new Date("2025-09-20"),
+    lieu: "Angré 8e tranche",
     statut: "Terminée",
     publique: true,
     objectifs: { nombreAmes: 100, nombreTracts: 500, nombreParticipants: 35 },
     resultats: { amesGagnees: 115, tractsDistribues: 480, participantsPresents: 32 },
-    parcours: "Départ église → Nouveau secteur → Zone commerciale → Retour",
-    programme: "07h00 - Rassemblement et prière\n08h00 - Départ pour le terrain\n08h30-12h00 - Évangélisation\n12h00 - Pause\n13h00-16h00 - Suite\n16h30 - Débriefing",
+    programme: "07h00 - Rassemblement et prière\n08h00 - Départ pour le terrain\n08h30-12h00 - Évangélisation\n12h00-16h00 - Suite\n16h30 - Débriefing",
     lieuxRassemblement: [
       { nom: "Église CM REHOBOTH", adresse: "Angré 8e tranche", heureRassemblement: "07h00" }
     ],
     notes: "115 âmes rencontrées. Total cumulé : 235 âmes. Seigneur soit loué !"
   },
   {
-    titre: "MERA 3 - Mission d'Évangélisation pour une Récolte Abondante",
-    type: "Journée évangélisation",
-    description: "Troisième grande journée de la mission MERA ! Rejoignez-nous pour cette journée spéciale d'évangélisation dans les rues d'Angré. Ensemble, nous allons impacter notre communauté avec l'amour de Christ.",
+    titre: "MERA 3",
+    type: "Rue",
+    description: "Campagne d'évangélisation lancée pendant la grande offensive de jeûne et prière 2025. Une initiative puissante pour toucher les âmes et transformer des vies par la puissance de l'Évangile.",
     dateDebut: new Date("2025-11-23"),
     dateFin: new Date("2025-11-23"),
-    lieu: "Angré 8e tranche, Cocody",
-    statut: "Planifiée",
+    lieu: "Angré 8e tranche",
+    statut: "En cours",
     publique: true,
     objectifs: { nombreAmes: 150, nombreTracts: 600, nombreParticipants: 40 },
-    parcours: "À définir selon le Saint-Esprit",
     programme: "07h00 - Rassemblement et prière de consécration\n08h00 - Départ en équipes\n08h30-12h00 - Évangélisation de rue\n12h00-13h00 - Pause fraternelle\n13h00-16h00 - Continuation de la mission\n16h30 - Retour, témoignages et action de grâce",
     lieuxRassemblement: [
       { nom: "Église CM REHOBOTH", adresse: "Angré 8e tranche", heureRassemblement: "07h00" }
@@ -112,11 +109,14 @@ async function seedCampagnes() {
     // Créer les nouvelles campagnes
     for (const campagne of campagnesData) {
       await Campagne.create(campagne);
-      console.log(`✅ ${campagne.titre} créée`);
+      console.log(`✅ ${campagne.titre} créée - ${campagne.statut}`);
     }
 
     console.log('\n═══════════════════════════════════════');
-    console.log('📋 3 Campagnes MERA ajoutées avec succès!');
+    console.log('📋 3 Campagnes MERA mises à jour!');
+    console.log('   - MERA 1 : 23 août 2025 (Terminée)');
+    console.log('   - MERA 2 : 20 septembre 2025 (Terminée)');
+    console.log('   - MERA 3 : 23 novembre 2025 (En cours)');
     console.log('═══════════════════════════════════════');
 
     await mongoose.connection.close();
