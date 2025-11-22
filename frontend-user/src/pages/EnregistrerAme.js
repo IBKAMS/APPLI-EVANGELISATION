@@ -798,14 +798,34 @@ const EnregistrerAme = () => {
   };
 
   return (
-    <Container maxWidth="md">
-      <Box sx={{ mt: 4, mb: 4 }}>
-        <Paper elevation={3} sx={{ p: 4 }}>
-          <Typography variant="h4" align="center" gutterBottom>
+    <Container maxWidth="md" sx={{ px: { xs: 1, sm: 2, md: 3 } }}>
+      <Box sx={{ mt: { xs: 2, sm: 4 }, mb: { xs: 2, sm: 4 } }}>
+        <Paper elevation={3} sx={{
+          p: { xs: 2, sm: 3, md: 4 },
+          borderRadius: { xs: 2, sm: 3 }
+        }}>
+          <Typography
+            variant="h4"
+            align="center"
+            gutterBottom
+            sx={{
+              fontSize: { xs: '1.25rem', sm: '1.5rem', md: '2rem' },
+              mb: { xs: 1, sm: 2 }
+            }}
+          >
             📝 Enregistrer une Nouvelle Âme
           </Typography>
 
-          <Stepper activeStep={activeStep} sx={{ mt: 3, mb: 4 }}>
+          <Stepper
+            activeStep={activeStep}
+            sx={{
+              mt: { xs: 1, sm: 3 },
+              mb: { xs: 2, sm: 4 },
+              '& .MuiStepLabel-label': {
+                fontSize: { xs: '0.65rem', sm: '0.75rem', md: '0.875rem' }
+              }
+            }}
+            alternativeLabel>
             {steps.map((label) => (
               <Step key={label}>
                 <StepLabel>{label}</StepLabel>
@@ -834,22 +854,38 @@ const EnregistrerAme = () => {
           <Box component="form" onSubmit={handleSubmit}>
             {renderStepContent(activeStep)}
 
-            <Box sx={{ display: 'flex', justifyContent: 'space-between', mt: 4 }}>
+            <Box sx={{
+              display: 'flex',
+              flexDirection: { xs: 'column-reverse', sm: 'row' },
+              justifyContent: 'space-between',
+              gap: { xs: 2, sm: 0 },
+              mt: { xs: 3, sm: 4 }
+            }}>
               <Button
                 disabled={activeStep === 0 || loading}
                 onClick={handleBack}
+                variant="outlined"
+                sx={{
+                  minHeight: { xs: 48, sm: 42 },
+                  width: { xs: '100%', sm: 'auto' }
+                }}
               >
                 Retour
               </Button>
-              <Box>
+              <Box sx={{ width: { xs: '100%', sm: 'auto' } }}>
                 {activeStep === steps.length - 1 ? (
                   <Button
                     type="submit"
                     variant="contained"
                     disabled={loading}
                     color="success"
+                    fullWidth
+                    sx={{
+                      minHeight: { xs: 52, sm: 42 },
+                      fontSize: { xs: '0.9rem', sm: '0.875rem' }
+                    }}
                   >
-                    {loading ? 'Enregistrement en cours...' : 'ENREGISTRER ET TERMINER'}
+                    {loading ? 'Enregistrement...' : 'ENREGISTRER ET TERMINER'}
                   </Button>
                 ) : (
                   <Button
@@ -857,8 +893,13 @@ const EnregistrerAme = () => {
                     onClick={handleNext}
                     disabled={loading}
                     color="primary"
+                    fullWidth
+                    sx={{
+                      minHeight: { xs: 52, sm: 42 },
+                      fontSize: { xs: '1rem', sm: '0.875rem' }
+                    }}
                   >
-                    {loading ? 'Enregistrement en cours...' : 'ENREGISTRER'}
+                    {loading ? 'Enregistrement...' : 'ENREGISTRER ET SUIVANT'}
                   </Button>
                 )}
               </Box>
