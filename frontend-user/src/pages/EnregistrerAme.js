@@ -309,36 +309,44 @@ const EnregistrerAme = () => {
   const handleNext = async () => {
     // Validation pour chaque étape
     if (activeStep === 0) {
-      // Étape 1: Vérifier qu'on a au moins une des combinaisons valides:
-      // - Nom + Prénom (avec ou sans Commune)
-      // - Nom + Commune
-      // - Prénom + Commune
+      // Étape 1: Nouvelles règles de validation
+      // Téléphone OBLIGATOIRE + au moins (Nom OU Prénom)
+      // Combinaisons valides:
+      // - Nom + Prénom + Téléphone (+ Commune optionnel)
+      // - Nom + Téléphone (+ Commune optionnel)
+      // - Prénom + Téléphone (+ Commune optionnel)
       const hasNom = formData.nom && formData.nom.trim() !== '';
       const hasPrenom = formData.prenom && formData.prenom.trim() !== '';
-      const hasCommune = formData.commune && formData.commune.trim() !== '';
+      const hasTelephone = formData.telephone && formData.telephone.trim() !== '';
 
-      const isValid = (hasNom && hasPrenom) || (hasNom && hasCommune) || (hasPrenom && hasCommune);
-
-      if (!isValid) {
-        setError('Veuillez renseigner: (Nom + Prénom) ou (Nom + Commune) ou (Prénom + Commune)');
+      // Le téléphone est OBLIGATOIRE
+      if (!hasTelephone) {
+        setError('Le numéro de téléphone est obligatoire');
+        setPhoneError('Téléphone requis');
         return;
       }
 
-      // Validation du téléphone seulement s'il est renseigné
-      if (formData.telephone && formData.telephone.trim() !== '') {
-        const phoneClean = formData.telephone.replace(/\s/g, '');
-        if (phoneClean[0] !== '0') {
-          setError('Le numéro de téléphone doit commencer par 0');
-          setPhoneError('Le numéro doit commencer par 0');
-          return;
-        }
-        const phoneDigits = getDigitsCount(formData.telephone);
-        if (phoneDigits !== 10) {
-          setError('Le numéro de téléphone doit contenir exactement 10 chiffres');
-          setPhoneError(`${phoneDigits}/10 chiffres - Numéro invalide`);
-          return;
-        }
+      // Validation du format téléphone (10 chiffres commençant par 0)
+      const phoneClean = formData.telephone.replace(/\s/g, '');
+      if (phoneClean[0] !== '0') {
+        setError('Le numéro de téléphone doit commencer par 0');
+        setPhoneError('Le numéro doit commencer par 0');
+        return;
       }
+      const phoneDigits = getDigitsCount(formData.telephone);
+      if (phoneDigits !== 10) {
+        setError('Le numéro de téléphone doit contenir exactement 10 chiffres');
+        setPhoneError(`${phoneDigits}/10 chiffres - Numéro invalide`);
+        return;
+      }
+
+      // Au moins Nom OU Prénom doit être renseigné
+      if (!hasNom && !hasPrenom) {
+        setError('Veuillez renseigner au moins le Nom ou le Prénom');
+        return;
+      }
+
+      setPhoneError('');
     } else if (activeStep === 1) {
       // Étape 2: Vérifier que typeRencontre est rempli
       if (!formData.typeRencontre) {
