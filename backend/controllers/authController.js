@@ -3,8 +3,8 @@ const jwt = require('jsonwebtoken');
 
 // Générer un token JWT
 const generateToken = (id) => {
-  return jwt.sign({ id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE
+  return jwt.sign({ id }, process.env.JWT_SECRET || 'rehoboth_jwt_secret_2025', {
+    expiresIn: process.env.JWT_EXPIRE || '7d'
   });
 };
 
