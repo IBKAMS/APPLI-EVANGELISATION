@@ -26,11 +26,20 @@ function App() {
           <Navbar />
           <main className="main-content">
             <Routes>
-              {/* Routes publiques */}
-              <Route path="/" element={<Home />} />
+              {/* Routes publiques (authentification) */}
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
-              <Route path="/forgot-password" element={<ForgotPassword />} />
+              <Route path="/forgot-password" element={<ForgotPassword />}/>
+
+              {/* Page d'accueil protégée */}
+              <Route
+                path="/"
+                element={
+                  <PrivateRoute>
+                    <Home />
+                  </PrivateRoute>
+                }
+              />
 
               {/* Routes protégées */}
               <Route
@@ -83,7 +92,7 @@ function App() {
               />
 
               {/* Redirection pour routes non trouvées */}
-              <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="*" element={<Navigate to="/login" replace />} />
             </Routes>
           </main>
           <Footer />

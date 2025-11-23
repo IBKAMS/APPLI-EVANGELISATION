@@ -73,7 +73,7 @@ function App() {
               <Route path="parcours" element={<Parcours />} />
               <Route path="campagnes" element={<Campagnes />} />
               <Route path="statistiques" element={<Statistiques />} />
-              <Route path="*" element={<Navigate to="/" replace />} />
+              <Route path="*" element={<Navigate to="/login" replace />} />
             </Route>
           </Routes>
         </Router>
