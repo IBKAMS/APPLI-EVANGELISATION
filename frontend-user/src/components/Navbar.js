@@ -62,8 +62,13 @@ const Navbar = () => {
       localStorage.setItem('adminUser', user);
     }
 
+    // Déterminer l'URL de l'interface admin selon l'environnement
+    const adminUrl = process.env.NODE_ENV === 'production'
+      ? 'https://cmr-ci.admin.jesus-roi.com'
+      : 'http://localhost:3001';
+
     // Ouvrir l'interface admin dans un nouvel onglet
-    window.open('http://localhost:3001', '_blank');
+    window.open(adminUrl, '_blank');
     handleClose();
   };
 
