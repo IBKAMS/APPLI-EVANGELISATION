@@ -40,7 +40,9 @@ import {
   TrendingUp as TrendingUpIcon,
   People as PeopleIcon,
   Assessment as AssessmentIcon,
-  Search as SearchIcon
+  Search as SearchIcon,
+  PhotoCamera as PhotoCameraIcon,
+  Close as CloseIcon
 } from '@mui/icons-material';
 import api from '../services/api';
 
@@ -112,6 +114,8 @@ const Campagnes = () => {
     tractsDistribues: '',
     participantsPresents: ''
   });
+  const [images, setImages] = useState([]);
+  const [uploading, setUploading] = useState(false);
 
   useEffect(() => {
     fetchCampaigns();
@@ -170,6 +174,8 @@ const Campagnes = () => {
         },
         notes: campaign.notes || ''
       });
+      // Charger les images existantes
+      setImages(campaign.images || []);
     } else {
       setSelectedCampaign(null);
       setFormData({
@@ -201,6 +207,8 @@ const Campagnes = () => {
         },
         notes: ''
       });
+      // Réinitialiser les images
+      setImages([]);
     }
     setOpenDialog(true);
   };
@@ -262,6 +270,55 @@ const Campagnes = () => {
     });
   };
 
+  // Fonction pour convertir une image en base64
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+    });
+  };
+
+  // Fonction pour gérer l'upload des images
+  const handleImageUpload = async (e) => {
+    const files = Array.from(e.target.files);
+    if (files.length === 0) return;
+
+    setUploading(true);
+    try {
+      const newImages = await Promise.all(
+        files.map(async (file) => {
+          const base64 = await convertToBase64(file);
+          return {
+            data: base64,
+            legende: file.name.replace(/\.[^/.]+$/, '') // Nom du fichier sans extension
+          };
+        })
+      );
+      setImages([...images, ...newImages]);
+      showSnackbar(`${files.length} image(s) ajoutée(s)`, 'success');
+    } catch (error) {
+      console.error('Erreur upload image:', error);
+      showSnackbar('Erreur lors de l\'upload des images', 'error');
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  // Fonction pour supprimer une image
+  const handleRemoveImage = (index) => {
+    const newImages = images.filter((_, i) => i !== index);
+    setImages(newImages);
+  };
+
+  // Fonction pour mettre à jour la légende d'une image
+  const handleUpdateLegende = (index, legende) => {
+    const newImages = [...images];
+    newImages[index].legende = legende;
+    setImages(newImages);
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -281,7 +338,9 @@ const Campagnes = () => {
         budget: {
           prevu: formData.budget.prevu ? parseFloat(formData.budget.prevu) : 0,
           depense: formData.budget.depense ? parseFloat(formData.budget.depense) : 0
-        }
+        },
+        // Inclure les images
+        images: images
       };
 
       if (selectedCampaign) {
@@ -869,6 +928,78 @@ const Campagnes = () => {
                   value={formData.notes}
                   onChange={handleInputChange}
                 />
+              </Grid>
+
+              {/* Section Upload Images */}
+              <Grid item xs={12}>
+                <Typography variant="subtitle1" sx={{ fontWeight: 'bold', mt: 2, mb: 1 }}>
+                  Photos de la campagne
+                </Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2, mb: 2 }}>
+                  <Button
+                    variant="outlined"
+                    component="label"
+                    startIcon={uploading ? <CircularProgress size={20} /> : <PhotoCameraIcon />}
+                    disabled={uploading}
+                    sx={{ borderColor: '#0047AB', color: '#0047AB' }}
+                  >
+                    {uploading ? 'Chargement...' : 'Ajouter des photos'}
+                    <input
+                      type="file"
+                      hidden
+                      multiple
+                      accept="image/*"
+                      onChange={handleImageUpload}
+                    />
+                  </Button>
+                  <Typography variant="caption" color="text.secondary">
+                    Formats acceptés: JPG, PNG, GIF (max 5MB par image)
+                  </Typography>
+                </Box>
+
+                {/* Prévisualisation des images */}
+                {images.length > 0 && (
+                  <Grid container spacing={2}>
+                    {images.map((image, index) => (
+                      <Grid item xs={6} sm={4} md={3} key={index}>
+                        <Card sx={{ position: 'relative' }}>
+                          <IconButton
+                            size="small"
+                            onClick={() => handleRemoveImage(index)}
+                            sx={{
+                              position: 'absolute',
+                              top: 4,
+                              right: 4,
+                              bgcolor: 'rgba(255,255,255,0.9)',
+                              '&:hover': { bgcolor: 'rgba(255,0,0,0.2)' }
+                            }}
+                          >
+                            <CloseIcon fontSize="small" color="error" />
+                          </IconButton>
+                          <Box
+                            component="img"
+                            src={image.data || image.url}
+                            alt={image.legende || `Photo ${index + 1}`}
+                            sx={{
+                              width: '100%',
+                              height: 120,
+                              objectFit: 'cover'
+                            }}
+                          />
+                          <Box sx={{ p: 1 }}>
+                            <TextField
+                              size="small"
+                              fullWidth
+                              placeholder="Légende"
+                              value={image.legende || ''}
+                              onChange={(e) => handleUpdateLegende(index, e.target.value)}
+                            />
+                          </Box>
+                        </Card>
+                      </Grid>
+                    ))}
+                  </Grid>
+                )}
               </Grid>
             </Grid>
           </DialogContent>

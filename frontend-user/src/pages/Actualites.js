@@ -32,6 +32,16 @@ import api from '../services/api';
 // URL de base du backend pour les fichiers statiques
 const BACKEND_URL = process.env.REACT_APP_API_URL?.replace('/api', '') || 'http://localhost:5001';
 
+// Fonction pour obtenir l'URL de l'image (supporte base64 et URL)
+const getImageSrc = (image) => {
+  if (!image) return '';
+  // Si l'image a une propriété 'data', c'est du base64
+  if (image.data) return image.data;
+  // Sinon, c'est une URL
+  if (image.url) return `${BACKEND_URL}${image.url}`;
+  return '';
+};
+
 // Sous-thèmes de l'offensive "Posséder la terre"
 const sousThemes = [
   { jour: 1, date: '2025-11-16', titre: "Récupère le pouvoir de domination perdu par la chute", reference: "Genèse 3:17-19", chapitre: "Chapitre 1 : Identité", resume: "Le péché a brisé l'autorité originelle de l'homme, rendant la terre hostile et soumise à l'usurpateur. Cependant, la perte n'est pas définitive : en Christ, nous sommes appelés à récupérer ce mandat de gouvernance perdu." },
@@ -484,7 +494,7 @@ const Actualites = () => {
                     {campagne.images && campagne.images.length > 0 && (
                       <CardMedia
                         component="img"
-                        image={`${BACKEND_URL}${campagne.images[0].url}`}
+                        image={getImageSrc(campagne.images[0])}
                         alt={campagne.titre}
                         sx={{
                           cursor: 'pointer',
@@ -492,7 +502,7 @@ const Actualites = () => {
                           objectFit: 'cover',
                           objectPosition: 'center top'
                         }}
-                        onClick={() => handleOpenMedia('image', `${BACKEND_URL}${campagne.images[0].url}`)}
+                        onClick={() => handleOpenMedia('image', getImageSrc(campagne.images[0]))}
                       />
                     )}
                     <CardContent sx={{ flexGrow: 1 }}>
@@ -620,7 +630,7 @@ const Actualites = () => {
                     {campagne.images && campagne.images.length > 0 && (
                       <CardMedia
                         component="img"
-                        image={`${BACKEND_URL}${campagne.images[0].url}`}
+                        image={getImageSrc(campagne.images[0])}
                         alt={campagne.titre}
                         sx={{
                           cursor: 'pointer',
@@ -628,7 +638,7 @@ const Actualites = () => {
                           objectFit: 'cover',
                           objectPosition: 'center top'
                         }}
-                        onClick={() => handleOpenMedia('image', `${BACKEND_URL}${campagne.images[0].url}`)}
+                        onClick={() => handleOpenMedia('image', getImageSrc(campagne.images[0]))}
                       />
                     )}
                     <CardContent sx={{ flexGrow: 1 }}>
@@ -861,11 +871,11 @@ const Actualites = () => {
                               boxShadow: 4
                             }
                           }}
-                          onClick={() => handleOpenMedia('image', `${BACKEND_URL}${image.url}`)}
+                          onClick={() => handleOpenMedia('image', getImageSrc(image))}
                         >
                           <CardMedia
                             component="img"
-                            image={`${BACKEND_URL}${image.url}`}
+                            image={getImageSrc(image)}
                             alt={image.legende || `Photo ${index + 1}`}
                             sx={{
                               height: 180,
