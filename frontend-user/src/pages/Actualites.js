@@ -484,10 +484,14 @@ const Actualites = () => {
                     {campagne.images && campagne.images.length > 0 && (
                       <CardMedia
                         component="img"
-                        height="200"
                         image={`${BACKEND_URL}${campagne.images[0].url}`}
                         alt={campagne.titre}
-                        sx={{ cursor: 'pointer' }}
+                        sx={{
+                          cursor: 'pointer',
+                          height: 220,
+                          objectFit: 'cover',
+                          objectPosition: 'center top'
+                        }}
                         onClick={() => handleOpenMedia('image', `${BACKEND_URL}${campagne.images[0].url}`)}
                       />
                     )}
@@ -616,10 +620,14 @@ const Actualites = () => {
                     {campagne.images && campagne.images.length > 0 && (
                       <CardMedia
                         component="img"
-                        height="200"
                         image={`${BACKEND_URL}${campagne.images[0].url}`}
                         alt={campagne.titre}
-                        sx={{ cursor: 'pointer' }}
+                        sx={{
+                          cursor: 'pointer',
+                          height: 220,
+                          objectFit: 'cover',
+                          objectPosition: 'center top'
+                        }}
                         onClick={() => handleOpenMedia('image', `${BACKEND_URL}${campagne.images[0].url}`)}
                       />
                     )}
@@ -843,20 +851,33 @@ const Actualites = () => {
                   </Typography>
                   <Grid container spacing={2}>
                     {selectedCampagne.images.map((image, index) => (
-                      <Grid item xs={6} sm={4} key={index}>
+                      <Grid item xs={6} sm={6} md={3} key={index}>
                         <Card
-                          sx={{ cursor: 'pointer' }}
+                          sx={{
+                            cursor: 'pointer',
+                            transition: 'transform 0.2s',
+                            '&:hover': {
+                              transform: 'scale(1.05)',
+                              boxShadow: 4
+                            }
+                          }}
                           onClick={() => handleOpenMedia('image', `${BACKEND_URL}${image.url}`)}
                         >
                           <CardMedia
                             component="img"
-                            height="120"
                             image={`${BACKEND_URL}${image.url}`}
                             alt={image.legende || `Photo ${index + 1}`}
+                            sx={{
+                              height: 180,
+                              objectFit: 'cover',
+                              objectPosition: 'center top'
+                            }}
                           />
                           {image.legende && (
-                            <CardContent sx={{ p: 1 }}>
-                              <Typography variant="caption">{image.legende}</Typography>
+                            <CardContent sx={{ p: 1, bgcolor: '#f5f5f5' }}>
+                              <Typography variant="caption" sx={{ fontWeight: 'medium' }}>
+                                {image.legende}
+                              </Typography>
                             </CardContent>
                           )}
                         </Card>
