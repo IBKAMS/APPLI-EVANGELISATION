@@ -416,6 +416,7 @@ const CallCenter = () => {
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Prénom</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Téléphone</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Commune</TableCell>
+                <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Date Ajout</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Agent Assigné</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Nb Appels</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Dernier Statut</TableCell>
@@ -431,6 +432,9 @@ const CallCenter = () => {
                   <TableCell>{ame.prenom}</TableCell>
                   <TableCell>{ame.telephone}</TableCell>
                   <TableCell>{ame.commune}</TableCell>
+                  <TableCell>
+                    {ame.dateRencontre && new Date(ame.dateRencontre).toLocaleDateString('fr-FR')}
+                  </TableCell>
                   <TableCell>
                     <TextField
                       select
