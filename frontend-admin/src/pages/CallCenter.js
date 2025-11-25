@@ -42,8 +42,10 @@ import {
   MenuBook
 } from '@mui/icons-material';
 import api from '../services/api';
+import { useAuth } from '../context/AuthContext';
 
 const CallCenter = () => {
+  const { user } = useAuth();
   const [ames, setAmes] = useState([]);
   const [amesFiltered, setAmesFiltered] = useState([]);
   const [stats, setStats] = useState({ totalAppels: 0, appelsDuJour: 0, stats: [] });
@@ -64,6 +66,9 @@ const CallCenter = () => {
   const [editingAgent, setEditingAgent] = useState(null);
   const [newAgentNameEdit, setNewAgentNameEdit] = useState('');
   const [openGuideEntretien, setOpenGuideEntretien] = useState(false);
+
+  // Vérifier si l'utilisateur peut assigner des agents (uniquement Florence et Idriss)
+  const canAssignAgents = user && (user.telephone === '0749743764' || user.telephone === '0708676604');
 
   useEffect(() => {
     fetchAmesAAppeler();
@@ -434,6 +439,7 @@ const CallCenter = () => {
                       onChange={(e) => handleAssignAgent(ame._id, e.target.value)}
                       sx={{ minWidth: 120 }}
                       displayEmpty
+                      disabled={!canAssignAgents}
                       SelectProps={{
                         displayEmpty: true,
                         renderValue: (value) => {
