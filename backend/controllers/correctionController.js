@@ -39,7 +39,7 @@ exports.getApprenants = async (req, res) => {
             email: reponse.utilisateur.email,
             telephone: reponse.utilisateur.telephone
           },
-          parcours: {
+          parcoursFormation: {
             _id: reponse.parcoursFormation._id,
             titre: reponse.parcoursFormation.titre,
             niveau: reponse.parcoursFormation.niveau
@@ -76,10 +76,18 @@ exports.getApprenants = async (req, res) => {
       }
     });
 
-    // Compter les thèmes corrigés
+    // Compter les thèmes corrigés et calculer la progression par thème
     Object.keys(apprenants).forEach(key => {
       const apprenant = apprenants[key];
       apprenant.themesCorrige = Object.values(apprenant.themes).filter(t => t.estCorrige).length;
+
+      // Calculer la progression pour chaque thème
+      Object.values(apprenant.themes).forEach(theme => {
+        theme.progression = theme.totalQuestions > 0
+          ? Math.round((theme.questionsRepondues / theme.totalQuestions) * 100)
+          : 0;
+      });
+
       apprenant.themes = Object.values(apprenant.themes);
       apprenant.progression = apprenant.totalQuestions > 0
         ? Math.round((apprenant.questionsRepondues / apprenant.totalQuestions) * 100)

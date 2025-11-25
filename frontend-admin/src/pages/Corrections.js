@@ -169,8 +169,8 @@ const Corrections = () => {
       setSaveLoading(true);
 
       await api.post('/corrections', {
-        utilisateur: selectedApprenant.utilisateur._id,
-        parcoursFormation: selectedApprenant.parcoursFormation._id,
+        utilisateurId: selectedApprenant.utilisateur._id,
+        parcoursFormationId: selectedApprenant.parcoursFormation._id,
         themeId: selectedTheme.themeId,
         themeNumero: selectedTheme.themeNumero,
         themeTitre: selectedTheme.themeTitre,
@@ -353,7 +353,7 @@ const Corrections = () => {
                           </Typography>
                         </Box>
                         <Typography variant="caption" color="textSecondary">
-                          {theme.reponsesCount}/{theme.totalQuestions} questions
+                          {theme.questionsRepondues}/{theme.totalQuestions} questions
                         </Typography>
                       </TableCell>
                       <TableCell align="center">
