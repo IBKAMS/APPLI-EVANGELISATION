@@ -90,7 +90,7 @@ const Utilisateurs = () => {
       case 'pasteur':
         return 'Pasteur';
       case 'agent_call_center':
-        return 'Agent Call Center';
+        return 'Call Center';
       case 'evangeliste':
         return 'Évangéliste';
       default:

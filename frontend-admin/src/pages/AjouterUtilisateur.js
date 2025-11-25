@@ -233,7 +233,7 @@ const AjouterUtilisateur = () => {
                     Administrateur
                   </MenuItem>
                   <MenuItem value="agent_call_center">
-                    Agent Call Center
+                    Call Center
                   </MenuItem>
                 </Select>
               </FormControl>
