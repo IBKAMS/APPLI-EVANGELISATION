@@ -416,7 +416,7 @@ const CallCenter = () => {
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Prénom</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Téléphone</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Commune</TableCell>
-                <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Date Ajout</TableCell>
+                <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Date de Rencontre</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Agent Assigné</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Nb Appels</TableCell>
                 <TableCell sx={{ color: 'white', fontWeight: 'bold' }}>Dernier Statut</TableCell>
