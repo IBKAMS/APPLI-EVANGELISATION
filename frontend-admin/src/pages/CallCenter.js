@@ -154,6 +154,20 @@ const CallCenter = () => {
 
   const handleOpenDialog = (ame) => {
     setSelectedAme(ame);
+
+    // Pré-remplir le formulaire avec les données du dernier appel s'il existe
+    if (ame.dernierAppel) {
+      setAppelData({
+        statutAppel: ame.dernierAppel.statutAppel || '',
+        notes: ame.dernierAppel.notes || '',
+        dureeAppel: ame.dernierAppel.dureeAppel || 0,
+        prochainAppel: ame.dernierAppel.prochainAppel
+          ? new Date(ame.dernierAppel.prochainAppel).toISOString().slice(0, 16)
+          : '',
+        priorite: ame.dernierAppel.priorite || 'Moyenne'
+      });
+    }
+
     setOpenDialog(true);
   };
 
@@ -488,7 +502,7 @@ const CallCenter = () => {
                     }
                   </TableCell>
                   <TableCell>
-                    <Tooltip title="Enregistrer un appel">
+                    <Tooltip title="Enregistrer/Modifier un appel">
                       <IconButton
                         onClick={() => handleOpenDialog(ame)}
                         sx={{ color: '#0047AB' }}
@@ -503,10 +517,10 @@ const CallCenter = () => {
           </Table>
         </TableContainer>
 
-        {/* Dialog pour enregistrer un appel */}
+        {/* Dialog pour enregistrer/modifier un appel */}
         <Dialog open={openDialog} onClose={handleCloseDialog} maxWidth="sm" fullWidth>
           <DialogTitle>
-            Enregistrer un Appel - {selectedAme?.nom} {selectedAme?.prenom}
+            {selectedAme?.dernierAppel ? 'Modifier' : 'Enregistrer'} un Appel - {selectedAme?.nom} {selectedAme?.prenom}
           </DialogTitle>
           <DialogContent>
             <Box sx={{ mt: 2 }}>
