@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { TextField, Box, Typography, Chip } from '@mui/material';
-import { Book } from '@mui/icons-material';
+import { Book, Edit } from '@mui/icons-material';
 
 const QuestionInput = ({ question, value, onChange, disabled }) => {
   const [localValue, setLocalValue] = useState(value || '');
@@ -24,6 +24,60 @@ const QuestionInput = ({ question, value, onChange, disabled }) => {
 
   const isCompletion = question.type === 'completion';
   const isLongText = question.type === 'texte_long';
+
+  // Fonction pour afficher la phrase à compléter avec espace scintillant
+  const renderCompletionText = () => {
+    if (!isCompletion || !question.texte) return null;
+
+    const parts = question.texte.split('...');
+    if (parts.length < 2) return null;
+
+    return (
+      <Box sx={{ mb: 2, p: 2, bgcolor: '#FFF9E6', borderRadius: 2, border: '2px dashed #FFA726' }}>
+        <Typography variant="body1" sx={{ color: '#333', fontWeight: 500, display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 1 }}>
+          {parts.map((part, idx) => (
+            <React.Fragment key={idx}>
+              <span>{part}</span>
+              {idx < parts.length - 1 && (
+                <Box
+                  component="span"
+                  sx={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 0.5,
+                    px: 2,
+                    py: 0.5,
+                    bgcolor: '#E3F2FD',
+                    borderRadius: 1,
+                    border: '2px solid #0047AB',
+                    animation: 'pulse 2s ease-in-out infinite',
+                    '@keyframes pulse': {
+                      '0%, 100%': {
+                        opacity: 1,
+                        boxShadow: '0 0 0 0 rgba(0, 71, 171, 0.4)'
+                      },
+                      '50%': {
+                        opacity: 0.7,
+                        boxShadow: '0 0 0 8px rgba(0, 71, 171, 0)'
+                      }
+                    }
+                  }}
+                >
+                  <Edit sx={{ fontSize: 16, color: '#0047AB' }} />
+                  <Typography component="span" sx={{ fontSize: '0.85rem', color: '#0047AB', fontWeight: 600 }}>
+                    {localValue || 'À compléter'}
+                  </Typography>
+                </Box>
+              )}
+            </React.Fragment>
+          ))}
+        </Typography>
+        <Typography variant="caption" sx={{ display: 'block', mt: 1, color: '#666', fontStyle: 'italic' }}>
+          💡 Renseignez votre réponse dans le champ ci-dessous
+        </Typography>
+      </Box>
+    );
+  };
 
   return (
     <Box sx={{ mb: 3 }}>
@@ -75,6 +129,9 @@ const QuestionInput = ({ question, value, onChange, disabled }) => {
         </Typography>
       )}
 
+      {/* Affichage de la phrase à compléter avec espace scintillant */}
+      {renderCompletionText()}
+
       {/* Champ de saisie */}
       <TextField
         fullWidth
@@ -110,21 +167,6 @@ const QuestionInput = ({ question, value, onChange, disabled }) => {
           }
         }}
       />
-
-      {/* Aide pour complétion */}
-      {isCompletion && question.reponseAttendue && (
-        <Typography
-          variant="caption"
-          sx={{
-            mt: 0.5,
-            display: 'block',
-            color: '#666',
-            fontStyle: 'italic'
-          }}
-        >
-          Indice: environ {question.reponseAttendue.length} caractères attendus
-        </Typography>
-      )}
     </Box>
   );
 };

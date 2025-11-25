@@ -486,20 +486,51 @@ const Corrections = () => {
                             />
                           )}
 
-                          {/* Question */}
-                          <Typography variant="body1" sx={{ fontWeight: 600, mb: 1 }}>
-                            {question?.texte || question?.instruction || 'Question'}
-                          </Typography>
+                          {/* Question avec réponse intégrée (pour questions à trous) ou normale */}
+                          {question?.type === 'completion' && question?.texte?.includes('...') ? (
+                            <Box sx={{ mb: 2 }}>
+                              <Typography variant="caption" sx={{ color: '#666', fontWeight: 600, display: 'block', mb: 1 }}>
+                                Question à compléter:
+                              </Typography>
+                              <Paper sx={{ p: 2, bgcolor: '#FFF9E6', borderLeft: '4px solid #FFA726' }}>
+                                <Typography variant="body1" sx={{ fontWeight: 500, display: 'flex', alignItems: 'center', flexWrap: 'wrap', gap: 1 }}>
+                                  {question.texte.split('...').map((part, idx, arr) => (
+                                    <React.Fragment key={idx}>
+                                      <span>{part}</span>
+                                      {idx < arr.length - 1 && (
+                                        <Chip
+                                          label={reponse.reponse || '(Pas de réponse)'}
+                                          sx={{
+                                            bgcolor: reponse.reponse ? '#E3F2FD' : '#FFEBEE',
+                                            color: reponse.reponse ? '#0047AB' : '#C62828',
+                                            fontWeight: 600,
+                                            fontSize: '0.9rem'
+                                          }}
+                                        />
+                                      )}
+                                    </React.Fragment>
+                                  ))}
+                                </Typography>
+                              </Paper>
+                            </Box>
+                          ) : (
+                            <>
+                              {/* Question normale */}
+                              <Typography variant="body1" sx={{ fontWeight: 600, mb: 1 }}>
+                                {question?.texte || question?.instruction || 'Question'}
+                              </Typography>
 
-                          {/* Réponse de l'apprenant */}
-                          <Paper sx={{ p: 2, bgcolor: '#F5F5F5', mb: 2 }}>
-                            <Typography variant="caption" sx={{ color: '#666', fontWeight: 600, display: 'block', mb: 1 }}>
-                              Réponse de l'apprenant:
-                            </Typography>
-                            <Typography variant="body2" sx={{ whiteSpace: 'pre-wrap' }}>
-                              {reponse.reponse || '(Pas de réponse)'}
-                            </Typography>
-                          </Paper>
+                              {/* Réponse de l'apprenant */}
+                              <Paper sx={{ p: 2, bgcolor: '#F5F5F5', mb: 2 }}>
+                                <Typography variant="caption" sx={{ color: '#666', fontWeight: 600, display: 'block', mb: 1 }}>
+                                  Réponse de l'apprenant:
+                                </Typography>
+                                <Typography variant="body2" sx={{ whiteSpace: 'pre-wrap' }}>
+                                  {reponse.reponse || '(Pas de réponse)'}
+                                </Typography>
+                              </Paper>
+                            </>
+                          )}
 
                           <Divider sx={{ my: 2 }} />
 
