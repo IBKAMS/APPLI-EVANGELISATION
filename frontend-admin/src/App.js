@@ -17,6 +17,7 @@ import Ressources from './pages/Ressources';
 import Parcours from './pages/Parcours';
 import Campagnes from './pages/Campagnes';
 import Statistiques from './pages/Statistiques';
+import Corrections from './pages/Corrections';
 
 // Thème REHOBOTH
 const theme = createTheme({
@@ -73,6 +74,7 @@ function App() {
               <Route path="parcours" element={<Parcours />} />
               <Route path="campagnes" element={<Campagnes />} />
               <Route path="statistiques" element={<Statistiques />} />
+              <Route path="corrections" element={<Corrections />} />
               <Route path="*" element={<Navigate to="/login" replace />} />
             </Route>
           </Routes>

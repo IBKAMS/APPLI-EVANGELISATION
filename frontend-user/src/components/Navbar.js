@@ -27,7 +27,8 @@ import {
   AutoStories,
   Logout,
   AdminPanelSettings,
-  Campaign
+  Campaign,
+  School
 } from '@mui/icons-material';
 import { useAuth } from '../context/AuthContext';
 import logoRehoboth from '../assets/logo-rehoboth-new.jpg';
@@ -79,6 +80,7 @@ const Navbar = () => {
     { text: 'Mes contacts', icon: <People />, path: '/mes-ames' },
     { text: 'Ressources', icon: <MenuBook />, path: '/ressources' },
     { text: 'Parcours', icon: <AutoStories />, path: '/parcours' },
+    { text: 'Formation', icon: <School />, path: '/formation' },
     { text: 'Actualités', icon: <Campaign />, path: '/actualites' }
   ];
 

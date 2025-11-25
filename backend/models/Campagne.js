@@ -133,6 +133,9 @@ const campagneSchema = new mongoose.Schema({
     url: {
       type: String
     },
+    data: {
+      type: String  // Pour les images base64
+    },
     legende: {
       type: String
     },

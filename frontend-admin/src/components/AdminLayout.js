@@ -29,7 +29,8 @@ import {
   BarChart,
   Settings,
   Logout,
-  AccountCircle
+  AccountCircle,
+  RateReview
 } from '@mui/icons-material';
 import { useAuth } from '../context/AuthContext';
 import logoRehoboth from '../assets/logo-rehoboth-new.jpg';
@@ -51,6 +52,7 @@ const AdminLayout = () => {
     { text: 'Call Center', icon: <Phone />, path: '/call-center' },
     { text: 'Ressources', icon: <MenuBook />, path: '/ressources' },
     { text: 'Parcours', icon: <School />, path: '/parcours' },
+    { text: 'Corrections Formation', icon: <RateReview />, path: '/corrections' },
     { text: 'Campagnes', icon: <Campaign />, path: '/campagnes' },
     { text: 'Statistiques', icon: <BarChart />, path: '/statistiques' }
   ];

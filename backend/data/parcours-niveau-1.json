@@ -1,0 +1,1291 @@
+{
+  "niveau": "niveau-1",
+  "titre": "MES PREMIERS PAS - NIVEAU I",
+  "description": "Cahier de l'apprenant - Centre Missionnaire Réhoboth",
+  "themes": [
+    {
+      "id": "theme-1",
+      "numero": 1,
+      "titre": "Dieu nous aime et a un plan merveilleux pour notre vie",
+      "sections": [
+        {
+          "id": "section-1-1",
+          "titre": "Dieu nous aime",
+          "instruction": "Lire le verset et compléter",
+          "questions": [
+            {
+              "id": "q-1-1-a",
+              "verset": "1Jean 4:8",
+              "texte": "Dieu est……………………………………………….",
+              "type": "completion",
+              "reponseAttendue": "amour"
+            },
+            {
+              "id": "q-1-1-b",
+              "verset": "1Jean 4:11",
+              "texte": "Dieu nous a …………………………………………",
+              "type": "completion",
+              "reponseAttendue": "aimés"
+            },
+            {
+              "id": "q-1-1-c",
+              "verset": "Jérémie 31:3b",
+              "texte": "Je t'aime d'un………………………………éternel",
+              "type": "completion",
+              "reponseAttendue": "amour"
+            },
+            {
+              "id": "q-1-1-d",
+              "verset": "Jean 16:27",
+              "texte": "Le Père lui-même vous……………………………",
+              "type": "completion",
+              "reponseAttendue": "aime"
+            },
+            {
+              "id": "q-1-1-e",
+              "verset": "Jean 3:16",
+              "texte": "Car Dieu a tant ………………………..le monde",
+              "type": "completion",
+              "reponseAttendue": "aimé"
+            },
+            {
+              "id": "q-1-1-f",
+              "texte": "Dieu te dit : « il t'aime ». Crois-tu cela ?",
+              "type": "oui_non"
+            }
+          ]
+        },
+        {
+          "id": "section-1-2",
+          "titre": "Il a un plan merveilleux pour nous",
+          "instruction": "Lire et écrire le verset",
+          "questions": [
+            {
+              "id": "q-1-2-a",
+              "verset": "Jérémie 29:11",
+              "texte": "« ………………………………………………………………………… »",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-1-2-b",
+              "verset": "Jean 10:10",
+              "texte": "« ………………………………………………………………………… »",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-1-2-c",
+              "texte": "Peux-tu lui faire confiance ?",
+              "type": "oui_non"
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-1-1",
+          "instruction": "Lire Deutéronome 7:1-24. Relever tous les mots et toutes les expressions qui montrent que Dieu a des projets merveilleux pour nous.",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-1-2",
+          "instruction": "Relever aussi ce que nous ne devons pas faire pour que nous puissions jouir de ces bénédictions.",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-1-3",
+          "instruction": "Lis le verset biblique: Jérémie 29:11. Ecris-le puis mémorise-le.",
+          "verset": "Jérémie 29:11",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-2",
+      "numero": 2,
+      "titre": "L'homme est pécheur et séparé de Dieu",
+      "sections": [
+        {
+          "id": "section-2-1",
+          "titre": "L'homme est pécheur",
+          "instruction": "Lire et écrire le verset",
+          "questions": [
+            {
+              "id": "q-2-1-a",
+              "verset": "Romains 3:23",
+              "texte": "« Tous ont péché et sont………………………….de la ………………. de Dieu",
+              "type": "completion"
+            },
+            {
+              "id": "q-2-1-b",
+              "verset": "Job 15:14-16",
+              "texte": "« Qu'est-ce qu'un homme pour qu'il soit………………. Et celui qui est né de la femme pour qu'il soit……...«",
+              "type": "completion"
+            },
+            {
+              "id": "q-2-1-c",
+              "verset": "Romains 3:10",
+              "texte": "Il n' y a pas de juste, pas même…………………………»",
+              "type": "completion"
+            },
+            {
+              "id": "q-2-1-d",
+              "verset": "Psaumes 14:3",
+              "texte": "« Il n'en est aucun qui………………………………….pas même ………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-2-1-e",
+              "texte": "De ce fait, je suis aussi………………………(compléter)",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-2-2",
+          "titre": "Qu'est-ce que le péché ?",
+          "instruction": "Lire le verset et l'écrire pendant le cours",
+          "questions": [
+            {
+              "id": "q-2-2-a",
+              "verset": "1Jean 3:4",
+              "texte": "Le péché est d'après :",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-2-2-b",
+              "verset": "Exode 32:8",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-2-2-c",
+              "verset": "Jérémie 10:23",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-2-2-d",
+              "verset": "Romains 7:14-25",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-2-2-e",
+              "verset": "Romains 14:23",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-2-2-f",
+              "verset": "Jacques 4:17",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-2-2-g",
+              "verset": "1Jean 5:17",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-2-2-h",
+              "verset": "Esaïe 53:6a",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-2-2-i",
+              "verset": "Romains 3:23",
+              "type": "texte_long"
+            }
+          ]
+        },
+        {
+          "id": "section-2-3",
+          "titre": "Les manifestations du péché",
+          "instruction": "Selon 1Thessaloniciens 5:23, l'homme est constitué de 3 parties",
+          "questions": [
+            {
+              "id": "q-2-3-constitution",
+              "verset": "1Thessaloniciens 5:23",
+              "texte": "1 Le………………………………………… 2…L'………………………………………. 3 L' ……………………………………….",
+              "type": "completion"
+            }
+          ],
+          "subsections": [
+            {
+              "id": "subsection-2-3-a",
+              "titre": "Les péchés qui souillent le corps",
+              "questions": [
+                {
+                  "id": "q-2-3-a-corps",
+                  "texte": "Le corps est la partie de l'être humain qui lui permet d'entrer en contact avec le ……… extérieur.",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-fornication",
+                  "titre": "La fornication",
+                  "texte": "Elle désigne …………………………………………………………………………………………………",
+                  "versets": ["Hébreux 13:4", "1Corinthiens 7:2", "1Corinthiens 6:18-20"],
+                  "type": "texte_long"
+                },
+                {
+                  "id": "q-2-3-a-fiancailles",
+                  "texte": "Les fiançailles ne constituent pas le………………………. De ce fait, les rapports sexuels entre fiancés pendant cette période sont……………………….",
+                  "verset": "Mathieu 1:18-1",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-adultere",
+                  "titre": "L'adultère",
+                  "texte": "Il désigne toute…………………conjugale",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-inceste",
+                  "titre": "L'inceste",
+                  "texte": "L'inceste désigne toute relation sexuelle entre …………………………………….………",
+                  "verset": "Lévitique 18:6-18",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-homosexualite",
+                  "titre": "L'homosexualité",
+                  "texte": "Il désigne toute relation sexuelle entre…………………qui sont appelés…………………",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-lesbianisme",
+                  "titre": "Le lesbianisme",
+                  "texte": "Il désigne toute relation sexuelle entre………………………………………qui sont appelées…………………………………………………",
+                  "verset": "Lévitique 18:22",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-bestialite",
+                  "titre": "La bestialité",
+                  "texte": "Elle désigne les rapports sexuels entre un………………………et un …………………………",
+                  "verset": "Lévitique 18:23",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-prostitution",
+                  "titre": "La prostitution",
+                  "texte": "C'est l'action de se……………………..contre de l'……………… ; c'est utiliser son corps pour obtenir un………………………..ou une ……………………..quelconque.",
+                  "verset": "Deutéronome 23:17-18",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-masturbation",
+                  "titre": "La masturbation",
+                  "texte": "elle consiste à se procurer des………………………sexuelles soi-même.",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-gourmandise",
+                  "titre": "La gourmandise ou excès de table",
+                  "texte": "c'est l'action de …………………..au-delà de ses………………………………",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-tabagisme",
+                  "titre": "Le tabagisme",
+                  "texte": "C'est l'action de…………………….le tabac, le chanvre et leur semblable.",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-ivrognerie",
+                  "titre": "L'ivrognerie",
+                  "texte": "C'estla consommation …………………………et ………………………de l'……………….pouvant conduire l'individu à devenir ……………………………",
+                  "versets": ["Lévitique 10:8-10", "Proverbes 20:1", "Esaïe 5:11", "Osée 4:11", "Habacuc 2:15-16"],
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-a-conclusion",
+                  "texte": "Tous ces péchés souillent notre corps qui est l'habitation de ……………….. Lisons 1Corinthiens 3:17. Que dit ce verset ?",
+                  "verset": "1Corinthiens 3:17",
+                  "type": "texte_long"
+                }
+              ]
+            },
+            {
+              "id": "subsection-2-3-b",
+              "titre": "Les péchés qui souillent l'âme",
+              "questions": [
+                {
+                  "id": "q-2-3-b-ame",
+                  "texte": "L'âme est le siège de nos………….., ……………..……………….. ; de notre ………………. et de notre………………………………………………………………………………….. Galates 5:19-21 nous permet de citer les péchés qui souillent l'âme.",
+                  "verset": "Galates 5:19-21",
+                  "type": "texte_long",
+                  "instruction": "A compléter pendant le cours"
+                }
+              ]
+            },
+            {
+              "id": "subsection-2-3-c",
+              "titre": "Les péchés qui souillent notre esprit",
+              "questions": [
+                {
+                  "id": "q-2-3-c-esprit",
+                  "texte": "L'esprit de l'homme est le siège de la ………………….. avec Dieu. Il comprend :la …………………..l'…………………………..et la………………………………………….",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-c-idolatrie",
+                  "titre": "L'idolâtrie",
+                  "texte": "Elle consiste à …………………, à se……………………………, à ………………………. ; à rendre un………………..à une…………………….(dieu ). Une idole est tout ce qui occupe la ……………………..place dans notre vie, place qui revient à …………………….le Créateur.",
+                  "versets": ["Genèse 35:2", "Exode 20:3-5", "Exode 23:13", "Lévitique 19:4", "Lévitique 26:1"],
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-c-spiritisme",
+                  "titre": "Le spiritisme",
+                  "texte": "C'est la croyance aux communications entre les……………………………et les………………",
+                  "versets": ["Deutéronome 18:9-14", "Lévitique 19:31", "Lévitique 20:6,27", "Esaïe 8:19"],
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-3-c-occultisme",
+                  "titre": "L'occultisme",
+                  "texte": "Il consiste à rechercher la solution à nos problèmes en entrant en contact avec les………………esprits (démons)",
+                  "type": "completion",
+                  "instruction": "A compléter pendant le cours"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section-2-4",
+          "titre": "Conséquences du péché",
+          "subsections": [
+            {
+              "id": "subsection-2-4-a",
+              "titre": "Au niveau physique",
+              "questions": [
+                {
+                  "id": "q-2-4-a-maladies",
+                  "texte": "Les ………………………….. : Lisons : Mat 12:22 ; Lc 13:10-17 ; Jn 5:5-14. Que pouvons-nous dire à l'égard de l'origine de certaines maladies ?",
+                  "type": "texte_long"
+                },
+                {
+                  "id": "q-2-4-a-mort",
+                  "titre": "La…………………… physique",
+                  "texte": "Depuis le péché d'Adam, la ………………règne dans le monde. L'homme est appelé à …………… ; son corps retourne à la …………………….. mais son âme et son esprit ne ………………………pas. Lisons Héb 9:27 ; Lc 16:19-31.",
+                  "type": "completion"
+                }
+              ]
+            },
+            {
+              "id": "subsection-2-4-b",
+              "titre": "Au niveau spirituel",
+              "questions": [
+                {
+                  "id": "q-2-4-b-mort-spirituelle",
+                  "titre": "La ……………… spirituelle",
+                  "texte": "toute personne qui vit dans le………………qu'elle en soit consciente ou…………est……………de Dieu",
+                  "versets": ["Esaïe 59:1-3", "Jérémie 11:9-11", "Romains 6:23"],
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-4-b-malediction",
+                  "titre": "La malédiction",
+                  "texte": "Toute personne privée de la communion avec Dieu est aussi privée de la vie……………………. Elle est sous la ………………………… même si elle jouit apparemment d'une prospérité financière ou matérielle.",
+                  "versets": ["Deutéronome 28:15-68", "Jérémie 7:13-15", "Exode 20:5", "Deutéronome 28:18"],
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-4-b-mort-eternelle",
+                  "titre": "La mort éternelle ou ………………….. mort",
+                  "texte": "Elle désigne toutes les personnes qui auront ……………………………Jésus-Christ. Elles subiront le …………………………….sévère de Dieu et seront jetées dans l'……………………de feu ou géhenne (enfer)",
+                  "versets": ["Jean 3:36", "Jean 5:29", "Luc 16:26", "Apocalypse 20:15", "Apocalypse 21:8"],
+                  "type": "completion"
+                },
+                {
+                  "id": "q-2-4-b-demons",
+                  "titre": "La porte d'entrée des démons",
+                  "texte": "L'homme qui vit dans le péché est………………………..du diable et de ses démons. Il est sous leur pouvoir",
+                  "versets": ["Romains 6:16", "2Pierre 2:19", "1Jean 3:9-10"],
+                  "type": "completion"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-2-1",
+          "instruction": "Après cette leçon es-tu convaincu de ta situation de péché devant Dieu ?",
+          "type": "oui_non"
+        },
+        {
+          "id": "app-2-2",
+          "instruction": "Si oui, sur un papier, fais la liste de tous les péchés que tu as commis et demande pardon à Dieu pour chacun d'eux.",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-2-3",
+          "instruction": "Lis 1Jn 1:9. Crois-tu que Dieu a pardonné tous tes péchés ?",
+          "verset": "1Jean 1:9",
+          "type": "oui_non"
+        },
+        {
+          "id": "app-2-4",
+          "instruction": "Lis le verset 1Jean 1:9. Ecris-le puis mémorise-le.",
+          "verset": "1Jean 1:9",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-3",
+      "numero": 3,
+      "titre": "Jésus-Christ est la seule solution de Dieu pour le péché de l'homme",
+      "sections": [
+        {
+          "id": "section-3-1",
+          "titre": "L'homme ne peut se sauver lui-même",
+          "questions": [
+            {
+              "id": "q-3-1-a",
+              "versets": ["Ephésiens 2:8-9", "Matthieu 5:48", "Esaïe 64:5"],
+              "texte": "Le ………………………, l'…………………… à une église ou à une religion, les ……………. œuvres ou la …………………. ne peuvent sauver l'homme. A cause de sa nature ……………………………l'homme est ……………………………. de se sauver.",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-3-2",
+          "titre": "La personne de Jésus-Christ",
+          "subsections": [
+            {
+              "id": "subsection-3-2-a",
+              "titre": "Qui est-il ?",
+              "questions": [
+                {
+                  "id": "q-3-2-a",
+                  "versets": ["Jean 1:1,14", "Jean 14:6"],
+                  "texte": "La Parole dont il est question, c'est Jésus-Christ. La Bible dit qu'il est : ………………… ……………donc parfait, juste, sans péché (verset 1) ; ………………… (verset 14) ; La………………………, le……………………qui conduit à Dieu.",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-3-2-a-2",
+                  "verset": "Jean 10:9",
+                  "texte": "Que dit Jésus ?",
+                  "type": "texte_long"
+                }
+              ]
+            },
+            {
+              "id": "subsection-3-2-b",
+              "titre": "Ce qu'il a fait",
+              "questions": [
+                {
+                  "id": "q-3-2-b",
+                  "versets": ["1Corinthiens 15:3-6", "Esaïe 53:6", "Romains 4:25"],
+                  "texte": "Il est………………………………sur la croix pour payer la dette de nos…………………… ; Il est ………………………des morts et nous a rendus………………… (c'est-à-dire sans faute, sans péché)",
+                  "type": "completion"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-3-1",
+          "instruction": "Suis-je convaincu que Jésus-Christ a pris ma place à la croix ?",
+          "type": "oui_non"
+        },
+        {
+          "id": "app-3-2",
+          "instruction": "Combien de mes péchés a-t-il payés à la croix ? (Rien du tout / Un peu / tous)",
+          "type": "choix_multiple"
+        },
+        {
+          "id": "app-3-3",
+          "instruction": "Puis-je par la prière, remercier Christ pour ce qu'il a fait ?",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-3-4",
+          "instruction": "Lire le verset biblique Jn 14:6. Ecris-le maintenant puis mémorise-le",
+          "verset": "Jean 14:6",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-4",
+      "numero": 4,
+      "titre": "Accepter Jésus-Christ dans notre vie",
+      "sections": [
+        {
+          "id": "section-4-1",
+          "titre": "Nous repentir envers Dieu",
+          "questions": [
+            {
+              "id": "q-4-1-a",
+              "verset": "Luc 15:11-22",
+              "texte": "Qu'est-ce que le jeune homme a fait ?",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-4-1-b",
+              "verset": "Luc 3:7-14",
+              "texte": "Qu'est-ce que Jean-Baptiste attendait de ceux qui venait pour se faire baptiser ?",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-4-1-c",
+              "verset": "Proverbes 28:13",
+              "texte": "Que retenez-vous ?",
+              "type": "texte_long"
+            },
+            {
+              "id": "q-4-1-d",
+              "titre": "Que signifie se repentir ?",
+              "texte": "Se repentir c'est : Faire ……………………………prendre une……………… différente ; aller dans la voie…………………………………….. ; Avouer ses………………………à Dieu et lui demander……………………………. ; Changer la………………………….pour le meilleur ; …………………….l'ordre des valeurs ; Abandonner le………………… : ……………………….. au mal ; Changer d'………………………à l'égard du péché",
+              "type": "completion"
+            },
+            {
+              "id": "q-4-1-e",
+              "titre": "Les 4 R de la repentance",
+              "texte": "1. R………………………. 2. R………………………. 3. R………………………. 4. R…………………",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-4-2",
+          "titre": "Accepter Jésus-Christ dans notre vie",
+          "questions": [
+            {
+              "id": "q-4-2-a",
+              "verset": "Jean 1:12",
+              "texte": "Nous devons …………… ou ………………….. Christ dans notre cœur.",
+              "type": "completion"
+            },
+            {
+              "id": "q-4-2-b",
+              "versets": ["Ephésiens 2:8-9", "Romains 6:3"],
+              "texte": "Nous devons l'……………. par la foi comme notre Sauveur.",
+              "type": "completion"
+            },
+            {
+              "id": "q-4-2-c",
+              "texte": "La foi n'est pas : La………………………..................... ; La …………………………………. ; Les…………………………-…………….",
+              "type": "completion"
+            },
+            {
+              "id": "q-4-2-d",
+              "texte": "Par contre la foi ici c'est : Transférer notre …………………………………en Jésus-Christ ; Nous …………………………………………..en Jésus-Christ seul pour avoir la vie",
+              "type": "completion"
+            },
+            {
+              "id": "q-4-2-e",
+              "versets": ["Romains 12:1"],
+              "texte": "Nous devons lui remettre la ………………….de notre vie. Il devient notre Seigneur.",
+              "type": "completion"
+            },
+            {
+              "id": "q-4-2-f",
+              "verset": "Apocalypse 3:20",
+              "texte": "Nous acceptons Christ en l'……………………………personnellement par la …………………... Que dit ce verset ? Ecris-le :",
+              "type": "texte_long"
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-4-1",
+          "instruction": "Peux-tu faire la prière d'acceptation maintenant ?",
+          "type": "oui_non"
+        },
+        {
+          "id": "app-4-2",
+          "instruction": "Si oui, répètes ceci : \"Seigneur Jésus, j'ai besoin de toi. Merci d'être mort sur la croix pour mes péchés. J'ouvre la porte de ma vie et je t'accepte comme mon Sauveur et Seigneur. Merci pour le pardon de mes péchés.\"",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-4-3",
+          "instruction": "Lisons encore Apo 3:20 - Où est Jésus-Christ maintenant par rapport à toi ?",
+          "verset": "Apocalypse 3:20",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-4-4",
+          "instruction": "Lis le verset biblique Jn 1:12. Ecris-le puis mémorise-le.",
+          "verset": "Jean 1:12",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-5",
+      "numero": 5,
+      "titre": "Sept (7) certitudes sur le salut",
+      "sections": [
+        {
+          "id": "section-5-1",
+          "titre": "Ce qui est arrivé",
+          "questions": [
+            {
+              "id": "q-5-1-a",
+              "versets": ["Apocalypse 3:20", "Colossiens 1:27"],
+              "texte": "…………………………………… est………………………venu dans notre…………………….",
+              "type": "completion"
+            },
+            {
+              "id": "q-5-1-b",
+              "versets": ["1Corinthiens 3:16", "Romains 8:9"],
+              "texte": "Le …………………………………habite en………………Nous sommes le…………………de Dieu",
+              "type": "completion"
+            },
+            {
+              "id": "q-5-1-c",
+              "verset": "Colossiens 1:14",
+              "texte": "Tous nos péchés sont……………………………. Il n'y a plus de ………………………pour nous",
+              "type": "completion"
+            },
+            {
+              "id": "q-5-1-d",
+              "verset": "Jean 1:1,9",
+              "texte": "Nous sommes……………………………de……………, nous sommes la…………………de Dieu et Dieu est notre………………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-5-1-e",
+              "verset": "Jean 3:3,5",
+              "texte": "Nous sommes ……………………de………………………C'est une………………………spirituelle",
+              "type": "completion"
+            },
+            {
+              "id": "q-5-1-f",
+              "versets": ["Jean 5:24", "1Jean 5:12-13"],
+              "texte": "Nous avons la………………………………………………….la vie éternelle signifie que nous passerons l'éternité avec……………………au……………………..",
+              "type": "completion"
+            },
+            {
+              "id": "q-5-1-g",
+              "verset": "2Corinthiens 5:17",
+              "texte": "Nous devenons une……………………………Les choses………………..sont…………………Notre vie passée est oubliée et effacée.",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-5-2",
+          "titre": "Etes-vous sûrs de votre salut ?",
+          "questions": [
+            {
+              "id": "q-5-2-a",
+              "titre": "1ère raison : la Parole de Dieu le déclare",
+              "versets": ["1Jean 5:11-13", "Jean 6:47"],
+              "texte": "Nous avons la vie éternelle parce que la……………………de……………..le déclare. Nous ne devons pas nous appuyer sur nos………………………sur de simples………….. ; ils sont instables",
+              "type": "completion"
+            },
+            {
+              "id": "q-5-2-b",
+              "titre": "2ème raison : le Saint-Esprit le témoigne",
+              "verset": "Romains 8:16",
+              "texte": "Le Saint-Esprit en nous…………………………….que nous ……………………..désormais à Dieu",
+              "type": "completion"
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-5-1",
+          "instruction": "As-tu remarqué toutes les bénédictions que tu as reçues lorsque tu as accepté Christ dans ta vie. Énumère-les encore.",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-5-2",
+          "instruction": "Peux-tu remercier pour cela le Seigneur Jésus par la prière.",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-5-3",
+          "instruction": "Lire le verset biblique 1Jean 5:12-13 puis écrivez-le puis mémorisez-le.",
+          "verset": "1Jean 5:12-13",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-6",
+      "numero": 6,
+      "titre": "La vie nouvelle en Christ",
+      "sections": [
+        {
+          "id": "section-6-1",
+          "titre": "Pourquoi le chrétien doit-il mener une vie nouvelle ?",
+          "questions": [
+            {
+              "id": "q-6-1-a",
+              "verset": "2Corinthiens 5:17",
+              "texte": "Il est en………………………et est devenu une nouvelle ……………………….. Toutes choses sont devenues…………………….",
+              "type": "completion"
+            },
+            {
+              "id": "q-6-1-b",
+              "verset": "Ephésiens 4:17-24",
+              "texte": "Le chrétien diffère du païen qui : Marche selon la……………………………………de ses…………………………. ; A l'intelligence………………… ; Est étranger à la…………………………de Dieu; A un cœur ……………………… ; Est………………………………… ; A perdu tout…………………… ; Commet toute sorte d'…………………………………… ;",
+              "type": "completion"
+            },
+            {
+              "id": "q-6-1-c",
+              "verset": "Ephésiens 5:8-11",
+              "texte": "Le chrétien n'est plus enfant des ……………………..mais enfant de…………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-6-1-d",
+              "verset": "Luc 3:3-9",
+              "texte": "Le chrétien qui s'est réellementrepentiporte des…………………dignes de la ………………….c'est à dire une viequi manifeste le………………………………………...",
+              "type": "completion"
+            },
+            {
+              "id": "q-6-1-e",
+              "verset": "1Jean 3:6-10",
+              "texte": "Il est né de ………………………et a reçu la ………………….de Dieu qui ne pratique plus le……………..",
+              "type": "completion"
+            },
+            {
+              "id": "q-6-1-f",
+              "versets": ["Ephésiens 5:3", "1Pierre 1:15"],
+              "texte": "Le chrétien est devenu…………………………c'est-à-dire ………… à part pour………………………….",
+              "type": "completion"
+            },
+            {
+              "id": "q-6-1-g",
+              "verset": "Ephésiens 5:1",
+              "texte": "Le chrétien est devenu…………………………….. ;de Dieu",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-6-2",
+          "titre": "Les domaines concernés par la vie nouvelle",
+          "subsections": [
+            {
+              "id": "subsection-6-2-a",
+              "titre": "Dans la vie sociale",
+              "questions": [
+                {
+                  "id": "q-6-2-a-intro",
+                  "versets": ["Jean 17:14-16", "Matthieu 5:13-14"],
+                  "texte": "Nous sommes dans le monde mais nous ne sommes pas du …………. ; nous sommes le ………………… de la terre et la …………………… du monde",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-a-1",
+                  "versets": ["Psaumes 101:7", "1Thessaloniciens 4:6"],
+                  "texte": "Etre……………………",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-a-2",
+                  "versets": ["Proverbes 25:17", "Tite 3:2"],
+                  "texte": "Avoir de…………………….rapports avec son voisinage",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-a-3",
+                  "verset": "Romains 13:8-10",
+                  "texte": "Aimer son……………………et le………………………….",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-a-4",
+                  "versets": ["Matthieu 12:36-37", "Jacques 3:5-10", "Proverbes 10:19", "Proverbes 13:3", "Proverbes 18:2"],
+                  "texte": "Veiller sur ……………………………………………",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-a-5",
+                  "verset": "Ephésiens 6:1-3",
+                  "texte": "Avoir des qui sont compatibles avec la……………………………",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-a-6",
+                  "verset": "Romains 12:2",
+                  "texte": "Etre ………….. dans son accoutrement et sa coiffure. Eviter de se……………..au siècle présent",
+                  "type": "completion"
+                }
+              ]
+            },
+            {
+              "id": "subsection-6-2-b",
+              "titre": "Dans la vie familiale",
+              "questions": [
+                {
+                  "id": "q-6-2-b-parents",
+                  "versets": ["Hébreux 13:4", "Ephésiens 6:4"],
+                  "texte": "Pour les parents : Honorer le…………………………; hair l'…………………………,le…………………..l'…………………,prendre ………………….des enfants",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-b-mari",
+                  "versets": ["Ephésiens 5:25,28-29", "Colossiens 3:19", "1Pierre 3:7"],
+                  "texte": "Pour le mari : Aimer sa……………………",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-b-femme",
+                  "versets": ["1Pierre 3:14", "Ephésiens 5:22-24"],
+                  "texte": "Pour la femme : Etre …………………………à son mari",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-b-enfants",
+                  "verset": "Ephésiens 6:1-3",
+                  "texte": "Pour les enfants : ……………………………les parents",
+                  "type": "completion"
+                }
+              ]
+            },
+            {
+              "id": "subsection-6-2-c",
+              "titre": "Dans la vie scolaire et professionnelle",
+              "questions": [
+                {
+                  "id": "q-6-2-c-intro",
+                  "texte": "Le chrétien doit se comporter comme un véritable…………………….de Dieu à l'…………………., au ………………….., au…………………., voir à l'………………..et à l'…………………….",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-c-employe",
+                  "versets": ["Ephésiens 6:5-8", "Colossiens 3:22-24", "1Pierre 2:18-20", "Tite 2:9-10"],
+                  "texte": "Pour l'employé ou l'étudiant : Ne pas…………………………le travail et les cours ; Etre l'…………………………au travail et à l'école ; Honorer, être ……………….,respecter les……………………………….",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-6-2-c-employeur",
+                  "versets": ["Ephésiens 6:9", "Colossiens 4:1", "Deutéronome 24:14-15", "Jacques 5:4"],
+                  "texte": "Pour l'employeur : respecter son…………………………………………. ; ………………….. un salaire juste ; équitable. Ne pas………………….dans son paiement.",
+                  "type": "completion"
+                }
+              ]
+            },
+            {
+              "id": "subsection-6-2-d",
+              "titre": "Sur le plan politique et syndical",
+              "questions": [
+                {
+                  "id": "q-6-2-d",
+                  "versets": ["Ephésiens 5:15", "Colossiens 2:8", "Ephésiens 5:8-13", "2Corinthiens 6:14-18", "Proverbes 24:21", "Proverbes 22:24-25", "Proverbes 1:10-15"],
+                  "texte": "Le chrétien ne doit pas vivre en marge de la société ; la Bible n'interdit nullement au chrétien de faire la politique. Cependant, il doit...",
+                  "type": "texte_long",
+                  "instruction": "A compléter pendant le cours"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-6-1",
+          "instruction": "Qu'est-ce qui m'a le plus touché au cours de cet enseignement et que je peux partager avec d'autres ?",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-6-2",
+          "instruction": "Pour la prière, y'a-t-il quelque chose pour laquelle je dois : louer le Seigneur ? me repentir envers Dieu et le prochain ? lui adresser une requête précise ?",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-7",
+      "numero": 7,
+      "titre": "Le baptême d'eau",
+      "sections": [
+        {
+          "id": "section-7-1",
+          "titre": "Introduction",
+          "questions": [
+            {
+              "id": "q-7-1-intro",
+              "versets": ["Marc 16:16", "Actes 2:38"],
+              "texte": "Après l'acte de ……………………….. et de ……………………….Christ comme notre Sauveur, l'acte suivant à accomplir dans notre vie chrétienne est le baptême d'eau. Le baptême d'eau est un……………………………………de Dieu",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-7-2",
+          "titre": "Pourquoi devrait-on être baptisé ?",
+          "questions": [
+            {
+              "id": "q-7-2-a",
+              "verset": "Matthieu 28:19",
+              "texte": "Le Seigneur …………………………..l'a………………………………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-7-2-b",
+              "verset": "Marc 16:16",
+              "texte": "C'est la……………………………………..chose à accomplir selon les instructions données aux…………………………",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-7-3",
+          "titre": "Quelle est sa signification ?",
+          "questions": [
+            {
+              "id": "q-7-3-a",
+              "verset": "1Pierre 3:20-21",
+              "texte": "Le baptême d'eau est : un …………………………………………………………………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-7-3-b",
+              "versets": ["Romains 6:3-5", "Ephésiens 4:4-6"],
+              "texte": "un ………………………………………………………………………… : Chaque fois qu'un croyant est baptisé, il témoigne au…………………que le Fils de …………..a été crucifié sur la……………………., qu'il a versé son…………………….., et qu'il est mort pour ses……………………………..",
+              "type": "completion"
+            },
+            {
+              "id": "q-7-3-c",
+              "versets": ["Romains 6:6,7,14", "Colossiens 2:12"],
+              "texte": "L'……………………………………………………………………………. : Lors du baptême, le croyant s'identifie avec le Seigneur………………………….dans sa……………………., son ………………………………..et sa……………………………..Le péché est crucifié à la …………………….., le vieil………………………….est enterré. Nous sommes……………………………….pour une vie…………………………...",
+              "type": "completion"
+            },
+            {
+              "id": "q-7-3-d",
+              "verset": "Colossiens 2:12-15",
+              "texte": "Une …………………………………………………………………………………: Le baptême témoigne devant Satan et ses………………………….que le Seigneur……………..a triomphé d'eux sur la……………………… ; Le croyant a été délivré du royaume et des puissances de …………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-7-3-e",
+              "verset": "Matthieu 10:32-33",
+              "texte": "Une …………………………………………………………………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-7-3-f",
+              "verset": "Galates 3:27",
+              "texte": "Une ………………………………………………………………………",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-7-4",
+          "titre": "Qui devrait être baptisé ?",
+          "questions": [
+            {
+              "id": "q-7-4-a",
+              "versets": ["Matthieu 28:19", "Marc 16:16", "Actes 2:41", "Actes 8:12,35-38"],
+              "texte": "D'après la signification du baptême, seul celui qui : s'est …………………sincèrement de tous ses………………………… ; a …………………………Jésus-Christ comme………………………et………………….personnel ; est en…………………..communion avec………………………et son semblable",
+              "type": "completion"
+            },
+            {
+              "id": "q-7-4-remarque",
+              "versets": ["Esaïe 7:16", "1Corinthiens 7:14"],
+              "texte": "Remarques : baptême de tout nourrisson (3 semaines à 2 ans) .ou de tout enfant qui n'est pas encore capable de ………………………le mal et de choisir le ………………… n'est pas ………………………………………. Avant l'âge de responsabilité, les enfants des croyants sont en ……………………………….. et ………………………….. par la ………………… de leurs parents",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-7-5",
+          "titre": "Comment devrait-on être baptisé ?",
+          "questions": [
+            {
+              "id": "q-7-5-a",
+              "versets": ["Matthieu 3:5-6", "Marc 1:9", "Jean 3:22-23", "Actes 8:38-39"],
+              "texte": "Le mot baptême vient du mot grec « baptizo » qui signifie '……………………………………………………………………………………… ». Le baptême d'eau biblique consiste donc à …………………………la personne, à la ………………sous l'eau : c'est une………………………totale. Le baptême par ……………. pratiqué dans certaines églises n'a pas de……………………..biblique",
+              "type": "completion"
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-7-1",
+          "instruction": "Qu'est-ce qui t'a le plus touché dans cet enseignement et que tu peux partager ?",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-7-2",
+          "instruction": "Es-tu déjà baptisé ? Si non pourquoi ?",
+          "type": "oui_non"
+        },
+        {
+          "id": "app-7-3",
+          "instruction": "Veux-tu le faire maintenant ? (Contacte le formateur)",
+          "type": "oui_non"
+        },
+        {
+          "id": "app-7-4",
+          "instruction": "Pour la prière y'a-t-il quelque chose : a) pour laquelle tu veux rendre grâces à Dieu ? b) à lui demander ?",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-8",
+      "numero": 8,
+      "titre": "La sainte cène",
+      "sections": [
+        {
+          "id": "section-8-1",
+          "titre": "La Sainte Cène est une institution divine",
+          "questions": [
+            {
+              "id": "q-8-1-designations",
+              "texte": "La Sainte Cène est encore désignée par : ……………………………du Seigneur (1Cor 11:20) ; ……………………………du Seigneur (1Cor 10:21) ; ……………………………(1Cor 10:16-17)",
+              "type": "completion"
+            },
+            {
+              "id": "q-8-1-institution",
+              "versets": ["Exode 12:1-28", "Luc 22:19", "1Corinthiens 10:16-17", "Matthieu 26:26-29", "Marc 14:22-25"],
+              "texte": "Jésus-Christ le Fils de Dieu a eu à ……………………….la Sainte-cène avec ses……………………….. Les ……………………. et les ………………………….. ont également eu à la célébrer",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-8-2",
+          "titre": "Sa signification",
+          "questions": [
+            {
+              "id": "q-8-2-elements",
+              "versets": ["Luc 22:20", "Matthieu 26:28", "Jean 6:51-58", "1Pierre 2:24", "1Pierre 3:18"],
+              "texte": "La Sainte Cène comprend deux éléments essentiels : le…………………. et le …………………... Le pain symbolise le …………………de Christ livré pour les pécheurs tandis que le vin, son …………………versé pour le pardon des péchés.",
+              "type": "completion"
+            },
+            {
+              "id": "q-8-2-significations",
+              "texte": "Celui qui participe à la Sainte Cène se souvient donc que : Christ est………………………………………………………………………… ; Toutes ses……………………………………………………………………selon Es 53:4-5 et 1Pi 2:24 ; Christ a été …………………………………………………………………………Gal 3:13 ; Il est uni à……………………….…………………………………………………………… :Héb 8:6-13 ; Il est aussi uni à tous les………………………………………………………………… Rom 12:5 ; 1Cor 12:13 ; Christ…………………………bientôt et par cette occasion, il annonce son ……………… : 1Thes 4:13-18 ; 2Pi 3:3-10 ; Apo 22:12,20 ; 1Cor 11:26.",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-8-3",
+          "titre": "Conditions pour prendre part à la Sainte Cène",
+          "questions": [
+            {
+              "id": "q-8-3-conditions",
+              "versets": ["Matthieu 26:26", "Actes 2:41-42", "Matthieu 5:23-25", "Matthieu 6:14-15", "1Corinthiens 7:5", "1Corinthiens 11:24-34"],
+              "texte": "Est autorisé à participer à la Table : Tout disciple de Christ c'est-à-dire celui qui………………………………………… ; Baptisé par ……………………………… ; en ………………………communion avec ………….. et avec son…………………………….",
+              "type": "completion"
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-8-1",
+          "instruction": "Qu'est-ce qui t'a le plus touché au cours de cet enseignement et que tu peux partager ?",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-8-2",
+          "instruction": "Peux-tu louer le Seigneur pour le don de sa vie pour toi ?",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-9",
+      "numero": 9,
+      "titre": "La croissance chrétienne",
+      "sections": [
+        {
+          "id": "section-9-1",
+          "titre": "Pourquoi devons-nous grandir ?",
+          "questions": [
+            {
+              "id": "q-9-1-a",
+              "verset": "2Pierre 3:18",
+              "texte": "C'est un………………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-9-1-b",
+              "verset": "Luc 2:40,52",
+              "texte": "Jésus-Christ lui-même a expérimenté la………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-9-1-c",
+              "verset": "1Corinthiens 13:11",
+              "texte": "Nous devons parvenir à la…………………………chrétienne et faire disparaitre en nous les caractères de l'………………………spirituelle.",
+              "type": "completion"
+            },
+            {
+              "id": "q-9-1-d",
+              "verset": "1Jean 1:12-14",
+              "texte": "La Bible énumère les étapes de la …………………spirituelle. Petits……….. …. Jeunes……………… ………………………",
+              "type": "completion"
+            },
+            {
+              "id": "q-9-1-e",
+              "verset": "Galates 4:1-2",
+              "texte": "Nous devons jouir de toutes les promesses et les richesses de Dieu qui sont réservées aux croyants……………………",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-9-2",
+          "titre": "Les dangers de ne pas grandir spirituellement",
+          "questions": [
+            {
+              "id": "q-9-2-dangers",
+              "versets": ["Luc 13:6-9", "Jean 15:2", "Ephésiens 4:14", "1Corinthiens 3:1-2", "Romains 5:8-9"],
+              "texte": "Nous ne pourrons pas…………………………toutes les……………………de Dieu mises à notre disposition à cause de notre……………………………. ; Nous serons ……………………… parce que nous ne portons pas de……………………… ; Nous serons victimes des fausses……………………………et des faux……………… ; Nous serons toujours……………………et par conséquent, nous ne pourrons pas……………….……………à Dieu.",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-9-3",
+          "titre": "Les domaines dans lesquels nous devons grandir",
+          "questions": [
+            {
+              "id": "q-9-3-domaines",
+              "versets": ["2Pierre 3:18", "Philip 1:9-10", "1Thess 3:12", "Luc 2:52", "Luc 17:5"],
+              "texte": "Nous devons croître : a) Dans la …………… et la……………………..du Christ ; b) Dans la………………..et la………………………; c) En………………………….. ; d) Dans la…………………….",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-9-4",
+          "titre": "Comment grandir dans la vie spirituelle ?",
+          "questions": [
+            {
+              "id": "q-9-4-moyens",
+              "versets": ["Matthieu 4:4", "Marc 4:8", "1Pierre 2:2", "Jacques 1:22-25", "1Thessaloniciens 5:17", "Hébreux 10:25", "Psaumes 133:1-3", "Jean 15:1-2"],
+              "texte": "Nous devons : a) …………………,……………….et…………………la Parole de Dieu ; b) avoir une vie de …………………; c) Aller aux réunions de l'…………………régulièrement ; e) Marcher dans la……………………………",
+              "type": "completion"
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-9-1",
+          "instruction": "Qu'est-ce que cet enseignement m'a apporté de plus ?",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-9-2",
+          "instruction": "Désirez vous grandir spirituellement ?",
+          "type": "oui_non"
+        },
+        {
+          "id": "app-9-3",
+          "instruction": "Si oui, dites-le à Dieu dans la prière et prenez la décision de mettre en pratique tout ce qu'il vous a dit au sujet de la croissance.",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-9-4",
+          "instruction": "Lire le verset 2Pierre 3:18 et écrivez-le puis mémorisez-le.",
+          "verset": "2Pierre 3:18",
+          "type": "texte_long"
+        }
+      ]
+    },
+    {
+      "id": "theme-10",
+      "numero": 10,
+      "titre": "La libéralité chrétienne",
+      "sections": [
+        {
+          "id": "section-10-1",
+          "titre": "La Bible mentionne trois façons de donner",
+          "subsections": [
+            {
+              "id": "subsection-10-1-a",
+              "titre": "Les dîmes et/ou les prémices",
+              "questions": [
+                {
+                  "id": "q-10-1-a-dimes",
+                  "titre": "Les dîmes",
+                  "versets": ["Lévitique 27:30,32", "2Chroniques 31:5", "Luc 18:12", "Matthieu 23:23", "Malachie 3:6-12", "1Corinthiens 6:10", "Deutéronome 12:11", "Néhémie 13:4-5", "Nombres 28:21-24", "Nombres 18:26-28"],
+                  "texte": "Selon Lév 27:30,32 la dime appartient à………………………. ; C'est la ……………………partie de tout ce que l'on reçoit en salaire, gages, gains, revenus, héritages, ventes, récoltes, etc. ; Les croyants de la nouvelle alliance donnent aussi …………………………. ; Ne pas donner sa………………… c'est …………………Dieu ; La dîme est apportée à la maison de l'……………………image de l'église locale ; Les dîmes servaient à soutenir les …………………………… et les ……………………… ; Tous ceux qui sont payés par les dîmes du peuple de Dieu doivent également payer la ……………….. : la …………… de la ……………… ; Toute dîme pouvait être ………………… à condition d'ajouter un cinquième.",
+                  "type": "completion"
+                },
+                {
+                  "id": "q-10-1-a-premices",
+                  "titre": "Les prémices",
+                  "versets": ["Deutéronome 26:1-11", "Exode 22:29-30", "Nombres 18:12-14", "2Chroniques 31:5", "Exode 23:19a", "Deutéronome 12:6", "Genèse 4:1-5", "Nombres 3:12", "1Corinthiens 15:20-23", "Romains 11:16"],
+                  "texte": "les…………………………étaient consacrées au…………………… ; Elles doivent être données à ……………….. ; Après leur présentation, elles appartenaient aux …………………………… ; Les prémices devaient être présentées au ………………….. ; Les …………………………… étaient pris à la place des fils premiers nés ; Plus tard, c'est ……………………………. qui fut les prémices de Dieu",
+                  "type": "completion"
+                }
+              ]
+            },
+            {
+              "id": "subsection-10-1-b",
+              "titre": "Les offrandes volontaires",
+              "questions": [
+                {
+                  "id": "q-10-1-b",
+                  "versets": ["Exode 25:1-9", "Néhémie 10:34-37", "Néhémie 12:44", "Actes 6:1-6", "1Timothée 5:9,16", "Marc 14:7", "Galates 2:10", "Romains 12:13", "1Corinthiens 16:1", "2Corinthiens 8:1-7", "Galates 6:6"],
+                  "texte": "En plus des dîmes et des prémices, le chrétien doit apporter des …………………. à Dieu. Les offrandes servent à la …………………………… et à l'………………………………des locaux, au soutien des ………………., des ………………des………………….dans le besoin et des …………………………",
+                  "type": "completion"
+                }
+              ]
+            },
+            {
+              "id": "subsection-10-1-c",
+              "titre": "Les aumônes ou les actions charitables",
+              "questions": [
+                {
+                  "id": "q-10-1-c",
+                  "versets": ["Lévitique 19:9-10", "Deutéronome 15:7-11", "Deutéronome 24:19", "Matthieu 6:1-4", "Luc 14:12-14", "Jacques 2:14-16"],
+                  "texte": "C'étaient des dons pour les …………………………….",
+                  "type": "completion"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "section-10-2",
+          "titre": "Comment donner au Seigneur ?",
+          "questions": [
+            {
+              "id": "q-10-2",
+              "versets": ["2Corinthiens 8:5", "1Corinthiens 13:5", "Exode 25:1", "Malachie 3:8-12", "Romains 14:23b", "2Corinthiens 9:7", "Jacques 2:16", "2Chroniques 31:12"],
+              "texte": "Nous devons…………………………………nous………………nous-mêmes au Seigneur ; par ……………………………; …………………………………….. et non par contrainte ; par ………………………………; par la……………………………; avec ………………; parfois avec ………………………; avec ………………………….",
+              "type": "completion"
+            }
+          ]
+        },
+        {
+          "id": "section-10-3",
+          "titre": "Dieu bénit ceux qui donnent",
+          "questions": [
+            {
+              "id": "q-10-3",
+              "versets": ["Luc 6:38", "2Corinthiens 9:6,8-12", "Matthieu 7:2", "Malachie 3:10-11", "Luc 16:11", "Matthieu 6:19-20", "Luc 18:22", "1Timothée 6:18-19", "1Rois 17:8-16", "Deutéronome 28:2-14", "Proverbes 3:9-10", "Proverbes 11:24-25"],
+              "texte": "« Donnez, et il vous sera …………………… » ; Ce que nous ……………………………….. est en intime relation avec ce que nous semons ; Dieu promet la……………………………….en abondance ; Dieu confie les ……………..richesses (connaissance et richesse spirituelles) à ceux qui sont fidèles dans les richesses ……………………..(argent) ; Dieu lui réserve un véritable………………dans le ciel ; La veuve de Sarepta a donné……………………………au…………………",
+              "type": "completion"
+            }
+          ]
+        }
+      ],
+      "applications": [
+        {
+          "id": "app-10-1",
+          "instruction": "Qu'est-ce qui vous a le plus touché au cours de cet enseignement ?",
+          "type": "texte_long"
+        },
+        {
+          "id": "app-10-2",
+          "instruction": "Pour la prière, y a-t-il quelque chose : a. pour laquelle je dois remercier Dieu ? b. dont je devrais me repentir envers Dieu ? c. à demander à Dieu ?",
+          "type": "texte_long"
+        }
+      ]
+    }
+  ]
+}

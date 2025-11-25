@@ -34,6 +34,8 @@ app.use('/api/parcours', require('./routes/parcours'));
 app.use('/api/appels', require('./routes/appelSuivi'));
 app.use('/api/progression', require('./routes/progression'));
 app.use('/api/campagnes', require('./routes/campagnes'));
+app.use('/api/parcours-formation', require('./routes/parcoursFormation'));
+app.use('/api/corrections', require('./routes/corrections'));
 
 // Route de test
 app.get('/', (req, res) => {

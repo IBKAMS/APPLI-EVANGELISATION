@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">REHOBOTH</string>
+    <string name="title_activity_main">REHOBOTH</string>
+    <string name="package_name">com.rehoboth.evangelisation</string>
+    <string name="custom_url_scheme">com.rehoboth.evangelisation</string>
+</resources>

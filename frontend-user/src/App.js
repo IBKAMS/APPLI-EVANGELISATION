@@ -17,6 +17,7 @@ import DetailAme from './pages/DetailAme';
 import Ressources from './pages/Ressources';
 import Parcours from './pages/Parcours';
 import Actualites from './pages/Actualites';
+import Formation from './pages/Formation';
 
 function App() {
   return (
@@ -87,6 +88,14 @@ function App() {
                 element={
                   <PrivateRoute>
                     <Actualites />
+                  </PrivateRoute>
+                }
+              />
+              <Route
+                path="/formation"
+                element={
+                  <PrivateRoute>
+                    <Formation />
                   </PrivateRoute>
                 }
               />
