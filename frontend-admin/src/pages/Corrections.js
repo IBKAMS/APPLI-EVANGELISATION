@@ -487,7 +487,7 @@ const Corrections = () => {
                           )}
 
                           {/* Question avec réponse intégrée (pour questions à trous) ou normale */}
-                          {question?.type === 'completion' && question?.texte?.includes('...') ? (
+                          {question?.texte?.includes('...') ? (
                             <Box sx={{ mb: 2 }}>
                               <Typography variant="caption" sx={{ color: '#666', fontWeight: 600, display: 'block', mb: 1 }}>
                                 Question à compléter:

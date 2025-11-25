@@ -27,7 +27,8 @@ const QuestionInput = ({ question, value, onChange, disabled }) => {
 
   // Fonction pour afficher la phrase à compléter avec espace scintillant
   const renderCompletionText = () => {
-    if (!isCompletion || !question.texte) return null;
+    // Détecte automatiquement si la question contient des "..."
+    if (!question.texte || !question.texte.includes('...')) return null;
 
     const parts = question.texte.split('...');
     if (parts.length < 2) return null;
