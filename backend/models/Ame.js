@@ -144,7 +144,7 @@ const ameSchema = new mongoose.Schema({
   // Agent Call Center assigné
   agentCallCenter: {
     type: String,
-    enum: ['Ornella', 'Octavie', 'Leila', ''],
+    enum: ['Ornella', 'Octavie', 'Leila', 'Léa', ''],
     default: ''
   },
 

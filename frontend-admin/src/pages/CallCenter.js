@@ -58,7 +58,7 @@ const CallCenter = () => {
     prochainAppel: '',
     priorite: 'Moyenne'
   });
-  const [agents, setAgents] = useState(['Ornella', 'Octavie', 'Leila']);
+  const [agents, setAgents] = useState(['Ornella', 'Octavie', 'Leila', 'Léa']);
   const [openGestionAgents, setOpenGestionAgents] = useState(false);
   const [newAgentName, setNewAgentName] = useState('');
   const [editingAgent, setEditingAgent] = useState(null);
