@@ -79,7 +79,6 @@ const Navbar = () => {
     { text: 'Enregistrer une âme', icon: <PersonAdd />, path: '/enregistrer-ame' },
     { text: 'Mes contacts', icon: <People />, path: '/mes-ames' },
     { text: 'Ressources', icon: <MenuBook />, path: '/ressources' },
-    { text: 'Parcours', icon: <AutoStories />, path: '/parcours' },
     { text: 'Formation', icon: <School />, path: '/formation' },
     { text: 'Actualités', icon: <Campaign />, path: '/actualites' }
   ];

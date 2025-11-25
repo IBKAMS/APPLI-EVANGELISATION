@@ -15,7 +15,6 @@ import EnregistrerAme from './pages/EnregistrerAme';
 import MesAmes from './pages/MesAmes';
 import DetailAme from './pages/DetailAme';
 import Ressources from './pages/Ressources';
-import Parcours from './pages/Parcours';
 import Actualites from './pages/Actualites';
 import Formation from './pages/Formation';
 
@@ -72,14 +71,6 @@ function App() {
                 element={
                   <PrivateRoute>
                     <Ressources />
-                  </PrivateRoute>
-                }
-              />
-              <Route
-                path="/parcours"
-                element={
-                  <PrivateRoute>
-                    <Parcours />
                   </PrivateRoute>
                 }
               />
