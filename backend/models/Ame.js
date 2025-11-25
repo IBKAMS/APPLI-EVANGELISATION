@@ -4,12 +4,10 @@ const ameSchema = new mongoose.Schema({
   // Informations personnelles
   nom: {
     type: String,
-    required: [true, 'Le nom est requis'],
     trim: true
   },
   prenom: {
     type: String,
-    required: [true, 'Le prénom est requis'],
     trim: true
   },
   telephone: {
