@@ -24,7 +24,7 @@ const admins = [
   { prenom: 'IDRISS', nom: 'KAMISSOKO', telephone: '0708676604' },
   { prenom: 'HERMANN', nom: 'KOUANDÉ', telephone: '0747313492' },
   { prenom: 'ARNAUD', nom: "N'GUESSAN", telephone: '0707964939' },
-  { prenom: 'FLORENCE', nom: "N'GUESSAN", telephone: '0749743764' },
+  { prenom: 'FLORENCE', nom: "N'GUESSAN", telephone: '0778092269' },
   { prenom: 'PASTEUR', nom: 'SAMPAH', telephone: '0708993543' }
 ];
 

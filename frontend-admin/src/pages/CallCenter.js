@@ -68,7 +68,7 @@ const CallCenter = () => {
   const [openGuideEntretien, setOpenGuideEntretien] = useState(false);
 
   // Vérifier si l'utilisateur peut assigner des agents (uniquement Florence et Idriss)
-  const canAssignAgents = user && (user.telephone === '0749743764' || user.telephone === '0708676604');
+  const canAssignAgents = user && (user.telephone === '0778092269' || user.telephone === '0708676604');
 
   useEffect(() => {
     fetchAmesAAppeler();

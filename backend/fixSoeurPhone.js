@@ -14,7 +14,7 @@ async function fixSoeurPhone() {
         nom: { $regex: /SŒUR|SOEUR/i },
         prenom: { $regex: /N'GUESSAN|NGUESSAN/i }
       },
-      { telephone: '0749743764' },
+      { telephone: '0778092269' },
       { new: true }
     );
 

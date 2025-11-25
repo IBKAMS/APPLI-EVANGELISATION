@@ -42,7 +42,7 @@ async function setAgouaAdmin2025() {
     console.log('1. ANCIEN N\'GUESSAN - Tél: 0707964939 - Mot de passe: admin2025');
     console.log('2. AGNIMEL ANCIEN VAL - Tél: 0708226161 - Mot de passe: admin2025');
     console.log('3. SAMPAH PASTEUR - Tél: 0708993543 - Mot de passe: admin2025');
-    console.log('4. FLORENCE N\'GUESSAN - Tél: 0749743764 - Mot de passe: admin2025');
+    console.log('4. FLORENCE N\'GUESSAN - Tél: 0778092269 - Mot de passe: admin2025');
     console.log('5. DAGAUD APÔTRE - Tél: 0586898848 - Mot de passe: admin2025');
     console.log('6. KOUANDÉ HERMANN - Tél: 0747313492 - Mot de passe: admin2025');
     console.log('7. KAMISSOKO IDRISS - Tél: 0708676604 - Mot de passe: admin2025');

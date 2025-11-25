@@ -10,7 +10,7 @@ async function updateAdmins() {
 
     // 1. Mettre à jour SŒUR N'GUESSAN -> N'GUESSAN FLORENCE
     console.log('📝 Mise à jour du compte SŒUR N\'GUESSAN...');
-    const nguessan = await User.findOne({ telephone: '0749743764' });
+    const nguessan = await User.findOne({ telephone: '0778092269' });
 
     if (nguessan) {
       nguessan.prenom = 'FLORENCE';
