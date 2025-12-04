@@ -45,6 +45,10 @@ const AdminLayout = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
+  // Liste des numéros Call Center (admins avec accès limité)
+  const callCenterPhones = ['0706144383', '0768127233', '0153738145', '0586408505'];
+  const isCallCenterAdmin = callCenterPhones.includes(user?.telephone);
+
   // Menu complet pour admin/pasteur
   const allMenuItems = [
     { text: 'Tableau de Bord', icon: <Dashboard />, path: '/' },
@@ -58,13 +62,13 @@ const AdminLayout = () => {
     { text: 'Statistiques', icon: <BarChart />, path: '/statistiques' }
   ];
 
-  // Menu limité pour agent_call_center
+  // Menu limité pour les admins Call Center
   const callCenterMenuItems = [
     { text: 'Call Center', icon: <Phone />, path: '/call-center' }
   ];
 
-  // Sélectionner le menu selon le rôle
-  const menuItems = user?.role === 'agent_call_center' ? callCenterMenuItems : allMenuItems;
+  // Sélectionner le menu selon le type d'utilisateur
+  const menuItems = isCallCenterAdmin ? callCenterMenuItems : allMenuItems;
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -217,7 +221,7 @@ const AdminLayout = () => {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-              {user?.role !== 'agent_call_center' && (
+              {!isCallCenterAdmin && (
                 <MenuItem onClick={handleUserInterface}>
                   <ListItemIcon>
                     <AccountCircle fontSize="small" />
@@ -225,7 +229,7 @@ const AdminLayout = () => {
                   Interface Évangéliste
                 </MenuItem>
               )}
-              {user?.role !== 'agent_call_center' && (
+              {!isCallCenterAdmin && (
                 <MenuItem onClick={() => { navigate('/parametres'); handleMenuClose(); }}>
                   <ListItemIcon>
                     <Settings fontSize="small" />

@@ -19,19 +19,22 @@ import Campagnes from './pages/Campagnes';
 import Statistiques from './pages/Statistiques';
 import Corrections from './pages/Corrections';
 
-// Composant pour protéger les routes admin (non accessible aux agents call center)
+// Liste des numéros Call Center (admins avec accès limité)
+const CALL_CENTER_PHONES = ['0706144383', '0768127233', '0153738145', '0586408505'];
+
+// Composant pour protéger les routes admin (non accessible aux admins Call Center)
 const AdminOnlyRoute = ({ children }) => {
   const { user } = useAuth();
-  if (user?.role === 'agent_call_center') {
+  if (CALL_CENTER_PHONES.includes(user?.telephone)) {
     return <Navigate to="/call-center" replace />;
   }
   return children;
 };
 
-// Composant pour la page d'accueil selon le rôle
+// Composant pour la page d'accueil selon le type d'utilisateur
 const HomeRedirect = () => {
   const { user } = useAuth();
-  if (user?.role === 'agent_call_center') {
+  if (CALL_CENTER_PHONES.includes(user?.telephone)) {
     return <Navigate to="/call-center" replace />;
   }
   return <Dashboard />;

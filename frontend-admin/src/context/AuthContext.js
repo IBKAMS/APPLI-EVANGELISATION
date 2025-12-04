@@ -30,11 +30,11 @@ export const AuthProvider = ({ children }) => {
       const response = await api.post('/auth/login', loginData);
       const { token, user } = response.data;
 
-      // Vérifier que l'utilisateur est admin, pasteur ou agent_call_center
-      if (user.role !== 'admin' && user.role !== 'pasteur' && user.role !== 'agent_call_center') {
+      // Vérifier que l'utilisateur est admin ou pasteur
+      if (user.role !== 'admin' && user.role !== 'pasteur') {
         return {
           success: false,
-          message: 'Accès refusé. Seuls les administrateurs, pasteurs et agents call center peuvent se connecter.'
+          message: 'Accès refusé. Seuls les administrateurs et pasteurs peuvent se connecter.'
         };
       }
 
