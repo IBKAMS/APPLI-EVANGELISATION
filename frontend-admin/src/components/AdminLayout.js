@@ -45,7 +45,8 @@ const AdminLayout = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const menuItems = [
+  // Menu complet pour admin/pasteur
+  const allMenuItems = [
     { text: 'Tableau de Bord', icon: <Dashboard />, path: '/' },
     { text: 'Utilisateurs', icon: <People />, path: '/utilisateurs' },
     { text: 'Suivi des Âmes', icon: <PersonAdd />, path: '/suivi-ames' },
@@ -56,6 +57,14 @@ const AdminLayout = () => {
     { text: 'Campagnes', icon: <Campaign />, path: '/campagnes' },
     { text: 'Statistiques', icon: <BarChart />, path: '/statistiques' }
   ];
+
+  // Menu limité pour agent_call_center
+  const callCenterMenuItems = [
+    { text: 'Call Center', icon: <Phone />, path: '/call-center' }
+  ];
+
+  // Sélectionner le menu selon le rôle
+  const menuItems = user?.role === 'agent_call_center' ? callCenterMenuItems : allMenuItems;
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
@@ -208,18 +217,22 @@ const AdminLayout = () => {
               open={Boolean(anchorEl)}
               onClose={handleMenuClose}
             >
-              <MenuItem onClick={handleUserInterface}>
-                <ListItemIcon>
-                  <AccountCircle fontSize="small" />
-                </ListItemIcon>
-                Interface Évangéliste
-              </MenuItem>
-              <MenuItem onClick={() => { navigate('/parametres'); handleMenuClose(); }}>
-                <ListItemIcon>
-                  <Settings fontSize="small" />
-                </ListItemIcon>
-                Paramètres
-              </MenuItem>
+              {user?.role !== 'agent_call_center' && (
+                <MenuItem onClick={handleUserInterface}>
+                  <ListItemIcon>
+                    <AccountCircle fontSize="small" />
+                  </ListItemIcon>
+                  Interface Évangéliste
+                </MenuItem>
+              )}
+              {user?.role !== 'agent_call_center' && (
+                <MenuItem onClick={() => { navigate('/parametres'); handleMenuClose(); }}>
+                  <ListItemIcon>
+                    <Settings fontSize="small" />
+                  </ListItemIcon>
+                  Paramètres
+                </MenuItem>
+              )}
               <MenuItem onClick={handleLogout}>
                 <ListItemIcon>
                   <Logout fontSize="small" />

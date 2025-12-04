@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { AuthProvider } from './context/AuthContext';
+import { AuthProvider, useAuth } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import AdminLayout from './components/AdminLayout';
 
@@ -18,6 +18,24 @@ import Parcours from './pages/Parcours';
 import Campagnes from './pages/Campagnes';
 import Statistiques from './pages/Statistiques';
 import Corrections from './pages/Corrections';
+
+// Composant pour protéger les routes admin (non accessible aux agents call center)
+const AdminOnlyRoute = ({ children }) => {
+  const { user } = useAuth();
+  if (user?.role === 'agent_call_center') {
+    return <Navigate to="/call-center" replace />;
+  }
+  return children;
+};
+
+// Composant pour la page d'accueil selon le rôle
+const HomeRedirect = () => {
+  const { user } = useAuth();
+  if (user?.role === 'agent_call_center') {
+    return <Navigate to="/call-center" replace />;
+  }
+  return <Dashboard />;
+};
 
 // Thème REHOBOTH
 const theme = createTheme({
@@ -65,16 +83,16 @@ function App() {
                 </PrivateRoute>
               }
             >
-              <Route index element={<Dashboard />} />
-              <Route path="utilisateurs" element={<Utilisateurs />} />
-              <Route path="utilisateurs/ajouter" element={<AjouterUtilisateur />} />
-              <Route path="suivi-ames" element={<SuiviAmes />} />
+              <Route index element={<HomeRedirect />} />
+              <Route path="utilisateurs" element={<AdminOnlyRoute><Utilisateurs /></AdminOnlyRoute>} />
+              <Route path="utilisateurs/ajouter" element={<AdminOnlyRoute><AjouterUtilisateur /></AdminOnlyRoute>} />
+              <Route path="suivi-ames" element={<AdminOnlyRoute><SuiviAmes /></AdminOnlyRoute>} />
               <Route path="call-center" element={<CallCenter />} />
-              <Route path="ressources" element={<Ressources />} />
-              <Route path="parcours" element={<Parcours />} />
-              <Route path="campagnes" element={<Campagnes />} />
-              <Route path="statistiques" element={<Statistiques />} />
-              <Route path="corrections" element={<Corrections />} />
+              <Route path="ressources" element={<AdminOnlyRoute><Ressources /></AdminOnlyRoute>} />
+              <Route path="parcours" element={<AdminOnlyRoute><Parcours /></AdminOnlyRoute>} />
+              <Route path="campagnes" element={<AdminOnlyRoute><Campagnes /></AdminOnlyRoute>} />
+              <Route path="statistiques" element={<AdminOnlyRoute><Statistiques /></AdminOnlyRoute>} />
+              <Route path="corrections" element={<AdminOnlyRoute><Corrections /></AdminOnlyRoute>} />
               <Route path="*" element={<Navigate to="/login" replace />} />
             </Route>
           </Routes>

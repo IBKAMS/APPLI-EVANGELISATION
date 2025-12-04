@@ -35,7 +35,8 @@ async function addEvangelistes() {
       { prenom: 'PAUL', nom: 'YOUAN', telephone: '0707017806' },
       { prenom: 'LETICIA', nom: 'KOUAMÉ', telephone: '0544056810' },
       { prenom: 'SONIA', nom: 'GNAORÉ', telephone: '0171579034' },
-      { prenom: 'PACÔME', nom: 'M\'BAHIA', telephone: '0703180908' }
+      { prenom: 'PACÔME', nom: 'M\'BAHIA', telephone: '0703180908' },
+      { prenom: 'CHRIST-SAMUEL', nom: '', telephone: '0789146674' }
     ];
 
     console.log('🔍 VÉRIFICATION DES DOUBLONS ET AJOUT DES ÉVANGÉLISTES');
